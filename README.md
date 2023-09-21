@@ -1,2 +1,13 @@
+<img alt="logo" style="float: right;right: 0px" src="https://github.com/3e415926/3e415926/assets/57232813/76fe751a-1ff8-44b5-94b2-5f3cf87fab45" width="200" div align=right>
+<p></p>
 
-![EAZ8cNznUirJbwuLCCiIao1_hmNfRa5i7ACluLxyPf4tQ8o1x2n_FNK3qWK2w1OYtUyhuEkcdcywuANKIc_b3w](https://github.com/hetins/hetins/assets/57232813/5e669355-e442-4383-9e78-04eaa0f025f7)
+<h1>Hi there 👋</h1>
+
+I am a full-stack developer with a focus on project analysis and 
+design, using various technologies to bring my designs and initial ideas to life. I have previously held positions in graphic design, network security, research assistant (social sciences), front-end, back-end, and blockchain development.
+
+### Research
+Currently, I am researching the feasibility of non-profit networks, neutrality of social science databases, and natural language processing systems.
+
+### Learn
+Additionally, I am learning Go, Rust and Elixir to be used in implementing my non-profit network.
