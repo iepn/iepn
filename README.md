@@ -9,5 +9,8 @@ design, using various technologies to bring my designs and initial ideas to life
 ### Research
 Currently, I am researching the feasibility of non-profit networks, neutrality of social science databases, and natural language processing systems.
 
+1. [Decentralized Self-Organizing Networks: Applying Defense to Distributed Autonomous Systems](https://www.researchgate.net/publication/372484162_Decentralized_Self-Organizing_Networks_Applying_Defense_to_Distributed_Autonomous_Systems)
+2. [The fourth-generation text processing system](https://www.researchgate.net/publication/367811818_The_fourth-generation_text_processing_system)
+
 ### Learn
 Additionally, I am learning Go, Rust and Elixir to be used in implementing my non-profit network. [@ienp](https://github.com/ienp)
