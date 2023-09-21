@@ -13,4 +13,4 @@ Currently, I am researching the feasibility of non-profit networks, neutrality o
 2. [The fourth-generation text processing system](https://www.researchgate.net/publication/367811818_The_fourth-generation_text_processing_system)
 
 ### Learn
-Additionally, I am learning Go, Rust and Elixir to be used in implementing my non-profit network. [@ienp](https://github.com/IENP)
+Additionally, I am learning Go, Rust and Elixir to be used in implementing my non-profit network. [@IENP](https://github.com/ienp)
