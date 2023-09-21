@@ -1,4 +1,4 @@
-<img alt="logo" style="float: right;right: 0px" src="https://github.com/3e415926/3e415926/assets/57232813/76fe751a-1ff8-44b5-94b2-5f3cf87fab45" width="200" div align=right>
+<img alt="logo" style="float: right;right: 0px" src="https://github.com/3e415926/3e415926/assets/57232813/76fe751a-1ff8-44b5-94b2-5f3cf87fab45" width="150" div align=right>
 <p></p>
 
 <h1>Hi there 👋</h1>
