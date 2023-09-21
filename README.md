@@ -10,4 +10,4 @@ design, using various technologies to bring my designs and initial ideas to life
 Currently, I am researching the feasibility of non-profit networks, neutrality of social science databases, and natural language processing systems.
 
 ### Learn
-Additionally, I am learning Go, Rust and Elixir to be used in implementing my non-profit network.
+Additionally, I am learning Go, Rust and Elixir to be used in implementing my non-profit network. [@ienp](https://github.com/ienp)
