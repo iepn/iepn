@@ -3,6 +3,9 @@
 
 <h1>Hi there</h1>
 
+> [!NOTE] 
+> **Some things are starting to**
+
 I am a full-stack developer with a focus on project analysis and 
 design, using various technologies to bring my designs and initial ideas to life. I have previously held positions in graphic design, network security, research assistant (social sciences), front-end, back-end, and blockchain development.
 
