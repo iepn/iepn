@@ -1,3 +1,3 @@
 # ^_^💦
 
-underachiever \ loser \ failure \ dud \ washout
+**underachiever \ loser \ failure \ dud \ washout**
