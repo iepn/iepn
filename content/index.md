@@ -1,6 +1,6 @@
 ---
 title: 'RHYME.Q 韵清'
-description: ''
+description: 'Rhyme.Q Blog showcases the expertise of Rhyme.Q, a seasoned professional with a comprehensive background in full-stack development, front-end and back-end technologies, blockchain development, design, and security research.'
 image:
   src: '/assets/showcasing.png'
   alt: 'RHYME.Q.'
@@ -15,7 +15,7 @@ head:
     - name: 'author'
       content: 'RHYME.Q'
     - name: 'copyright'
-      content: '© 2022 RHYME.Q'
+      content: '© 2024 RHYME.Q'
 ---
 :home-con
 <p style="display: none">rhyme.qing</p>

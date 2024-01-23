@@ -155,6 +155,7 @@ a {
     padding: 10px;
     font-weight: bold;
     color: #213ED4;
+    z-index: 999999999;
     transform: translate(0, -50%);
     box-shadow: 0px 3px 19px 0px rgb(212 212 212);
   }

@@ -10,7 +10,15 @@
 ---
 # 江雪联合实验室銮音项目
 
-<iframe src="https://www.behance.net/embed/project/187423063?ilo0=1" allowfullscreen lazyload frameborder="0" allow="clipboard-write" refererPolicy="strict-origin-when-cross-origin"></iframe>
+::page-img
+<div class="slider">
+  <div class="slides">
+      <img src="/images/pages/tianyan/ty-0.png">
+      <img src="/images/pages/tianyan/ty-1.png">
+      <img src="/images/pages/tianyan/ty-2.png">
+  </div>
+</div>
+::
 
 江雪之前已经成立和组建了一个虹霓实验室，但因为虹霓主要针对天演计算、分析等方面的项目和边缘领域，就将一些辅助性的项目，划分给了銮音。銮音取自《说文》中的 "人君乘车四马四镳八銮，铃象鸾，鸟声，和则敬也。"
 
@@ -25,3 +33,4 @@
 并计算出主要或需要的参数，进行系统的分析和统计的综合架构，主要用于特殊领域的分析和画像。
 
 :page-tips
+
