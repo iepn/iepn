@@ -6,7 +6,7 @@
 "types": "RESEARCH"
 "release_date": 2023.12.25
 "demo": "https://secgay.test.luanyin.jiangxue.org/"
-"images": "https://imgur.com/NdvsFmy.png"
+"images": "/images/pages/tianyan/tianyan-home.png"
 ---
 # 江雪联合实验室銮音项目
 
