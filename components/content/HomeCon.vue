@@ -62,7 +62,9 @@ const getCurrentPageData = computed(() => {
         <p @click="paginate(currentPage - 1)"
              :style="{ display: currentPage === 1 ? 'none' : 'inline-block' }"
         >PREV</p>
-        <p @click="paginate(currentPage + 1)" :disabled="currentPage === totalPages">NEXT</p>
+        <p @click="paginate(currentPage + 1)"
+           :style="{ display: currentPage === totalPages ? 'none' : 'inline-block' }"
+        >NEXT</p>
         <p>PAGE: {{ currentPage }}</p>
       </div>
       <div id="pagenum">
