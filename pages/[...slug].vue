@@ -13,7 +13,7 @@ onMounted(() => {
 // 获取当前月份
 const setCurrentMonthImage = () => {
   const currentMonth = new Date().getMonth() + 1; // 注意：getMonth 返回的是 0 到 11，所以要加 1
-  currentMonthImage.value = `/images/calendar/${currentMonth}.webp`; // 假设图片名称为月份.jpg
+  currentMonthImage.value = `${currentMonth}`; // 假设图片名称为月份.jpg
 };
 
 // 使用 useAsyncData 函数发起异步请求
@@ -34,7 +34,7 @@ const { data: equalQuery } = await useAsyncData("equal", () => {
             <div class="body-about-click">
               <a href="/" style="color: #9C9C9C">HOME</a>
             </div>
-            <img :src="currentMonthImage">
+            <calendar :moon="currentMonthImage" />
           </div>
           <div>
             <ul class="body-con-cal_nav">

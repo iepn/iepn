@@ -36,6 +36,11 @@
   font-size: small;
   display: none;
 }
+@media screen and (min-width: 2000px) {
+  .slides img {
+    height: 1053px !important;
+  }
+}
 @media screen and (max-width: 768px) {
   .info #fontSizePC {
     display: none

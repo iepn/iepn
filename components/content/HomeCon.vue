@@ -33,14 +33,18 @@ const { data: equalQuery } = await useAsyncData("equal", () => {
       </ul>
       <p>{{ all._PATH }}</p>
       <NuxtLink :to="all._path"><div class="body-con-main__img" :style="{ background: 'center no-repeat url(' + all.images + ')' }"></div></NuxtLink>
-      <a :href="all.demo" target="_blank">{{ all.demo }}</a>
-      <p>BY: {{ all.director }}</p>
+        <div id="auther">
+          <a :href="all.demo" target="_blank">{{ all.demo }}</a>
+          <p>BY: {{ all.director }}</p>
+        </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-
+#auther {
+  line-height: 12px;
+}
 .body-con-support svg {
   margin-top: 20px;
   height: 30px;
@@ -57,6 +61,11 @@ a {
   margin-bottom: 15px;
   height: 753px;
   background-size: cover !important;
+}
+@media screen and (min-width: 2000px) {
+  .body-con-main__img {
+    height: 1053px;
+  }
 }
 .body-con-main_title {
   display: flex;
