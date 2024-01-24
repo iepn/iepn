@@ -19,3 +19,5 @@ head:
 ---
 :home-con
 <p style="display: none">rhyme.qing</p>
+
+:page-tips

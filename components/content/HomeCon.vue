@@ -3,6 +3,10 @@ import { ref, onMounted } from 'vue';
 
 // 设置 ref 变量存储当前月份的图片路径
 const currentMonthImage = ref<string>("");
+// 设置 ref 变量存储当前页数
+const currentPage = ref<number>(1);
+// 设置每页显示的数量
+const itemsPerPage = 5;
 
 // 在组件挂载时调用方法设置当前月份的图片路径
 onMounted(() => {
@@ -20,11 +24,26 @@ const { data: equalQuery } = await useAsyncData("equal", () => {
   // 返回 /more 目录下的数据，也可以（.where({ director: 'Hayao Miyazaki' }) 来进行过滤）
   return queryContent("work/").find();
 });
+
+// 计算总页数
+const totalPages = Math.ceil(equalQuery.value?.length / itemsPerPage);
+
+// 分页逻辑
+const paginate = (page: number) => {
+  currentPage.value = page;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+const getCurrentPageData = computed(() => {
+  const startIndex = (currentPage.value - 1) * itemsPerPage;
+  const endIndex = currentPage.value * itemsPerPage;
+  return equalQuery.value?.slice(startIndex, endIndex) || [];
+});
 </script>
 
 <template>
   <div class="column  body-content-layout">
-    <div class="body-con-main" v-if="equalQuery" v-for="all in equalQuery.slice(0, 5)" :key="all.id">
+    <div class="body-con-main" v-if="equalQuery" v-for="all in getCurrentPageData" :key="all.id">
       <ul class="body-con-main_title">
         <li class="body-con-main_title__top"></li>
         <li style="color: #000000;font-weight: bold">{{ all.title }}</li>
@@ -38,10 +57,51 @@ const { data: equalQuery } = await useAsyncData("equal", () => {
           <p>BY: {{ all.director }}</p>
         </div>
     </div>
+    <div class="pagination-layout">
+      <div id="pageto">
+        <p @click="paginate(currentPage - 1)"
+             :style="{ display: currentPage === 1 ? 'none' : 'inline-block' }"
+        >PREV</p>
+        <p @click="paginate(currentPage + 1)" :disabled="currentPage === totalPages">NEXT</p>
+        <p>PAGE: {{ currentPage }}</p>
+      </div>
+      <div id="pagenum">
+        <div v-for="page in totalPages" :key="page">
+          <p style="color: #cfcfcf;" @click="paginate(page)" :class="{ active: page === currentPage, firstPage: page === currentPage }">{{ page }}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
+.pagination-layout p.active {
+  font-weight: bold;
+}
+#pageto {
+  display: flex;
+  font-weight: bold;
+}
+#pageto p {
+  margin-right: 20px;
+  color: #cfcfcf;
+}
+#pagenum {
+  display: flex;
+}
+#pagenum div {
+  margin-right: 10px;
+}
+/* 添加 firstPage 类的样式，以设置第一页的特殊样式 */
+.pagination-layout p.firstPage {
+  color: #213ED4 !important;
+}
+.pagination-layout {
+  cursor: pointer;
+  display: block;
+  line-height: 3px;
+  margin-top: 50px;
+}
 #auther {
   line-height: 12px;
 }
