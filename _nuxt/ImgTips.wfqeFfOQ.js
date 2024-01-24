@@ -1,0 +1,1 @@
+import{_ as n,o as t,c,q as o}from"./entry.ihnnwdNv.js";const r={};function s(e,a){return t(),c("main",null,[o(e.$slots,"default",{},void 0,!0)])}const d=n(r,[["render",s],["__scopeId","data-v-557fc7b5"]]);export{d as default};
