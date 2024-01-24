@@ -10,6 +10,8 @@
 ---
 # 江雪联合实验室銮音项目
 
+:page-back
+
 ::page-img
 <div class="slider">
   <div class="slides">

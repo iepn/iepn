@@ -32,9 +32,9 @@ const { data: equalQuery } = await useAsyncData("equal", () => {
         <div class="body-content-fixed">
           <div>
             <div class="body-about-click">
-              <a href="javascript:history.go(-1)" style="color: #9C9C9C">HOME</a>
+              <a href="/" style="color: #9C9C9C">HOME</a>
             </div>
-            <img :src="currentMonthImage" alt="rhyme.qing current Month Image">
+            <img :src="currentMonthImage">
           </div>
           <div>
             <ul class="body-con-cal_nav">
@@ -83,6 +83,7 @@ const { data: equalQuery } = await useAsyncData("equal", () => {
   font-weight: bold;
   margin-bottom: 22px;
   color: #000;
+  margin-left: 26px;
 }
 #article iframe {
   width: 100% !important;
