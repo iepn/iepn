@@ -11,10 +11,12 @@
 <style scoped>
  img {
    width: 100% !important;
+   margin-bottom: 6px;
  }
  main {
-   font-style: italic;
-   color: #8e8e8e;
+   color: #b6b6b6;
    font-size: small;
+   margin-top: 19px;
+   margin-bottom: 19px;
  }
 </style>

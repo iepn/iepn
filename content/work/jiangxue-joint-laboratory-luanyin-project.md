@@ -5,7 +5,7 @@
 "director": "RHYME.Q"
 "types": "RESEARCH"
 "release_date": 2023.12.25
-"demo": "https://secgay.test.luanyin.jiangxue.org/"
+"demo": "https://gateway.luanyin.jiangxue.org/"
 "images": "/images/pages/tianyan/tianyan-home.png"
 ---
 # 江雪联合实验室銮音项目
@@ -43,16 +43,38 @@
 
 如果在某某某群又通知了，邀请函上写着您的名字；但您没有马上动身，而是先申请 XXX 课题组的 XXX 经费；之后风风光光的收到邀请、朋友拍个合照，然后发个朋友圈感慨。
 
-半个月后，您的著作刊登 XXX 刊首版甚至是封面，在各种社交平台、短视频平台疯狂转发。评论区中：在环境艰苦工作的地方忙碌了一天或和 "客户舌战群雄的" 群音荟萃们纷纷支持、赞同和感到 XX 进步 阿美莉卡又不行了 XXX 不亮 XX 亮的评论再次让您感到努力都是有意义的。
+半个月后，您的著作刊登 XXX 刊首版甚至是封面，在各种社交平台、短视频平台疯狂转发。在评论区中：一群环境艰苦工作的地方忙碌了一天或和 "客户舌战群雄的" 群音荟萃们纷纷支持、赞同和感到 XX 进步 阿美莉卡又不行了 XXX 不亮 XX 亮的评论再次让您感到努力都是有意义的。
 
 于是您好巧不巧不知道从什么地方或者是什么吐槽群里看到了这个文章并加上了吐槽："这人是不是想多了啊，肯定是破防了、自己想的这么多肯定是说的自己或者说自己经历过"，于是您嘴角一撇，果然不是所有人都和我一样优秀。
 ::
 
+最近，剑桥的研究团队和合作者巧妙地利用了上述方式，即虚拟实验室，在这篇论文中被称为 SDLs（Distributed Self-Driving Laboratories，分布式自动驾驶实验室 / 分布式自主实验室）刊登在 [Nature Journal](https://www.nature.com/articles/s41467-023-44599-9)。
+
 ::img-tips
 <img src="/images/info/1/1.png" >
-图源 1：From Platform to Knowledge Graph: Distributed Self-Driving Laboratories
+图源 1 | From Platform to Knowledge Graph: Distributed Self-Driving Laboratories
 https://como.ceb.cam.ac.uk/media/preprints/c4e-preprint-310.pdf
 ::
+
+这和天演虹霓实验室的做法类似，通过大量的计算资源将物理实验室设备进行虚拟仿真，已达到云上开展研究和设计，同时实时共享数据可让其合作者实时观察进度和操作。
+
+::img-tips
+<img src="/images/info/1/2.png" >
+图源 2 | 江雪虹霓实验室：为江雪和其附属团队和项目及其合作者提供计算资源和实验环境的计算平台
+https://gateway.hongni-lab.jiangxue.org/
+::
+
+当然江雪的某些研究领域不像是生物、化学、物理那样需要什么样的器材和设备，江雪的主要项目更侧重计算机网络、科学等方面，因此我们只是将计算资源以及网络、环境仿真和模拟等。
+
+::img-tips
+<img src="/images/info/1/3.png" >
+图源 3 | 根据科学家的目标请求触发自主工作流，作为在知识图谱中传播信息。
+https://como.ceb.cam.ac.uk/media/preprints/c4e-preprint-310.pdf
+::
+
+像是图 3 这种直接在关系图里直接通过描述词然后让 ROG Agent 直接执行和调用的，还是很新颖的。江雪目前更多的是通过 Code 模块化的预设命令完成这种操作。感觉很像 [obsidian](https://obsidian.md/) 的知识图谱，通过这种方式呈现的效果感觉比看状态、日志的效果更加直观。
+
+目前，虹霓通常的架构基本上都是通过 [Neo4j](https://neo4j.com/) 存储和查询关系比较方便，查询速度也很快，再加上 [Vertx Framework](https://vertx.io/docs/) 非常适合计算数据庞大且需要经常查询的计算结果。
 
 :page-tips
 

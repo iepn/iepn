@@ -114,6 +114,7 @@ const getCurrentPageData = computed(() => {
 a {
   color: #000000;
 }
+
 .body-con-main {
   padding-top: 20px;
 }

@@ -38,7 +38,7 @@ const { data: equalQuery } = await useAsyncData("equal", () => {
           </div>
           <div>
             <ul class="body-con-cal_nav">
-              <li>about</li>
+              <li><NuxtLink to="/about">about</NuxtLink></li>
               <li>design</li>
               <li>develop</li>
               <li>research</li>
@@ -72,6 +72,12 @@ const { data: equalQuery } = await useAsyncData("equal", () => {
 </template>
 
 <style>
+span.katex-html {
+  display: none;
+}
+#article p a {
+  color: #b4b4b4 !important;
+}
 #article p {
   color: #8e8e8e;
   text-align: justify;
@@ -181,5 +187,13 @@ ul {
   margin: 0;
   text-transform: uppercase;
   color: #9C9C9C;
+}
+ul li a {
+  color: #9C9C9C;
+}
+ul li a:hover {
+  transition:  0.1s ease;
+  color: #213ED4;
+  font-weight: bold;
 }
 </style>
