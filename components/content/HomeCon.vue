@@ -106,13 +106,14 @@ const getCurrentPageData = computed(() => {
 }
 #auther {
   line-height: 12px;
+  text-transform: uppercase;
 }
 .body-con-support svg {
   margin-top: 20px;
   height: 30px;
 }
-a {
-  color: #000000;
+#auther a {
+  color: #9C9C9C;
 }
 
 .body-con-main {

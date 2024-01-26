@@ -53,13 +53,13 @@ const { data: equalQuery } = await useAsyncData("equal", () => {
       </div>
       <ul class="body-con-show-on">
         <li style="display: flex;">
-          <a href="javascript:history.go(-1)">
+          <a href="/">
             <svg width="9" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12 2L3 11.5L12 21" stroke="#213ED4" stroke-width="3.5"/>
             </svg>
           </a>
         </li>
-        <li>About</li>
+        <li><NuxtLink to="/about" style="color: #0047e1">About</NuxtLink></li>
         <li>friendly link</li>
       </ul>
       <div class="column is-two-thirds body-content-layout">
