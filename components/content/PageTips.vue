@@ -14,7 +14,7 @@
         <p>对此，本人感到非常抱歉，未来将尽可能通过信创 - 新势力（信息技术\科技创新）技术架构，如 Spring Cloud Alibaba、ArkTS、GaussDB、达梦数据库、Unity Operating System、CEC-IDE、HBuilder、Tengine、立创泰山派等（不一一列举）进行迭代。</p>
         <p>并且，本网站会尽可能更新、维护和引进新的、更加现代化且快速的敏感词处理、过滤工具。如果您有推荐的产品或相关方面的建议，欢迎联系。</p>
     <div style="font-weight: bold;cursor: pointer;margin-top: 30px;">
-      <p>联系作者 | 法律声明 | 道德准则 | 网站地图 | RSS </p>
+      <p>联系作者 | 道德准则 | 网站地图 | GPG | RSS  </p>
       <p>Designed, Developed, and Written by Rhyme.Q ❄️<br>Copyright © 2013 - 2024 RHYME Q. All Rights Reserved. 韵清 版权所有</p>
       <p id="dep"><a href="https://github.com/iepn/iepn/commits/main/">DEPLOY workflows: {{ firstSha }}</a></p>
     </div>

@@ -51,7 +51,7 @@ const getCurrentPageData = computed(() => {
         <li>{{  all.release_date }}</li>
       </ul>
       <p>{{ all._PATH }}</p>
-      <NuxtLink :to="all._path"><div class="body-con-main__img" :style="{ background: 'center no-repeat url(' + all.images + ')' }"></div></NuxtLink>
+      <NuxtLink :to="all._path"><div class="body-con-main__img" :style="{ background: 'left no-repeat url(' + all.images + ')' }"></div></NuxtLink>
         <div id="auther">
           <a :href="all.demo" target="_blank">{{ all.demo }}</a>
           <p>BY: {{ all.director }}</p>
