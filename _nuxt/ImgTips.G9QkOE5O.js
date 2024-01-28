@@ -1,1 +1,0 @@
-import{_ as n,o as s,c as t,s as o}from"./entry.nQ_J25Y7.js";const r={};function a(e,c){return s(),t("main",null,[o(e.$slots,"default",{},void 0,!0)])}const d=n(r,[["render",a],["__scopeId","data-v-00b506ef"]]);export{d as default};
