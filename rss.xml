@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[RHYME.Q 韵清]]></title>
+        <description><![CDATA[RHYME.Q 韵清]]></description>
+        <link>https://iepn.pages.dev</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Sun, 28 Jan 2024 17:45:49 GMT</lastBuildDate>
+        <atom:link href="https://iepn.pages.dev/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[江雪联合实验室銮音项目]]></title>
+            <description><![CDATA[江雪之前已经成立和组建了一个虹霓实验室，但由于虹霓主要专注于天演计算、分析等方面的项目和边缘领域，因此将一些辅助性的项目划分给了銮音。銮音的名字取自《说文》中的:人君乘车四马四镳八銮，铃象鸾，鸟声，和则敬也。]]></description>
+            <link>iepn.pages.dev/work/jiangxue-joint-laboratory-luanyin-project</link>
+            <guid isPermaLink="true">iepn.pages.dev/work/jiangxue-joint-laboratory-luanyin-project</guid>
+            <pubDate>Mon, 25 Dec 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[江雪虹霓实验室计算平台]]></title>
+            <description><![CDATA[在负责过江雪天演舆情项目后，我们发现辅助和周边服务存在较大的不足。因此，在天演舆情中，除了数据、存储、分析和研判等方面的对比外，几乎无法与在资金、人际关系和先发优势等方面具备优势的前辈个体有所差异。]]></description>
+            <link>iepn.pages.dev/work/jiangxue-tianyan-hongni-computing-platform</link>
+            <guid isPermaLink="true">iepn.pages.dev/work/jiangxue-tianyan-hongni-computing-platform</guid>
+            <pubDate>Tue, 12 Dec 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[江雪天演舆情分析项目]]></title>
+            <description><![CDATA[在谈及 舆情 之前、我相信有很多人会脸色一变觉得这种类似的分析项目就是普通的数据抓取和分析，甚至是直接看社交平台（含短视频平台）的数据进行反馈。]]></description>
+            <link>iepn.pages.dev/work/jiangxue-tianyan-internet-public-opinion-platform</link>
+            <guid isPermaLink="true">iepn.pages.dev/work/jiangxue-tianyan-internet-public-opinion-platform</guid>
+            <pubDate>Fri, 25 Aug 2023 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
