@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     head: {
       "script": [
         {
-          type:"text/javascript", body: true, src: '~/assets/js/clarity.js'
+          type:"text/javascript", body: true, src: '/clarity.js'
         }
       ]
     },
