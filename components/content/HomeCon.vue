@@ -8,21 +8,27 @@ const currentPage = ref<number>(1);
 // 设置每页显示的数量
 const itemsPerPage = 5;
 
-// 在组件挂载时调用方法设置当前月份的图片路径
 onMounted(() => {
   setCurrentMonthImage();
 });
 
 // 获取当前月份
 const setCurrentMonthImage = () => {
-  const currentMonth = new Date().getMonth() + 1; // 注意：getMonth 返回的是 0 到 11，所以要加 1
-  currentMonthImage.value = `/images/calendar/${currentMonth}.webp`; // 假设图片名称为月份.jpg
+  const currentMonth = new Date().getMonth() + 1;
+  currentMonthImage.value = `/images/calendar/${currentMonth}.webp`;
 };
 
 // 使用 useAsyncData 函数发起异步请求
 const { data: equalQuery } = await useAsyncData("equal", () => {
   // 返回 /more 目录下的数据，也可以（.where({ director: 'Hayao Miyazaki' }) 来进行过滤）
   return queryContent("work/").find();
+});
+
+// 在异步请求返回后对数据进行排序
+equalQuery.value?.sort((a, b) => {
+  const dateA = new Date(a.release_date).getTime();
+  const dateB = new Date(b.release_date).getTime();
+  return dateB - dateA; // 从最新到最旧排序
 });
 
 // 计算总页数
@@ -114,6 +120,8 @@ const getCurrentPageData = computed(() => {
 }
 #auther a {
   color: #9C9C9C;
+  word-break: break-all;
+  line-height: initial;
 }
 
 .body-con-main {

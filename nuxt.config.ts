@@ -23,6 +23,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxt/content','nuxt-clarity-analytics','nuxt-gtag'],
   MICROSOFT_CLARITY_ID: 'kso8ok34uv',
+  nitro: { prerender: { routes: ['/rss.xml'] } },
   gtag: {
     id: 'G-ESEYFS53HH'
   }
