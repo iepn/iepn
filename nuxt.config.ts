@@ -11,15 +11,7 @@ export default defineNuxtConfig({
       ]
     }
   },
-  app: {
-    head: {
-      "script": [
-        {
-          type:"text/javascript", body: true, src: '/clarity.js'
-        }
-      ]
-    },
-  },
+  MICROSOFT_CLARITY_ID: 'kso8ok34uv',
   devtools: { enabled: true },
-  modules: ['@nuxt/content']
+  modules: ['@nuxt/content','nuxt-clarity-analytics']
 })

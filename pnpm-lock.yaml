@@ -11,6 +11,9 @@ devDependencies:
   nuxt:
     specifier: ^3.9.3
     version: 3.9.3(vite@5.0.12)
+  nuxt-clarity-analytics:
+    specifier: ^0.0.6
+    version: 0.0.6
   rehype-katex:
     specifier: ^7.0.0
     version: 7.0.0
@@ -4861,6 +4864,15 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.3
+    dev: true
+
+  /nuxt-clarity-analytics@0.0.6:
+    resolution: {integrity: sha512-5Aks0ALsti6jnkaFwvlIlj5wQq6sff5iliX0l8fYgYi9UfRalXvLpX33tbHykuEBbzuBXC34Vypu7BMgvlpCqA==}
+    dependencies:
+      '@nuxt/kit': 3.9.3
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
     dev: true
 
   /nuxt@3.9.3(vite@5.0.12):
