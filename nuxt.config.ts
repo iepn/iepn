@@ -11,6 +11,15 @@ export default defineNuxtConfig({
       ]
     }
   },
+  app: {
+    head: {
+      "script": [
+        {
+          type:"text/javascript", body: true, src: '/clarity.js'
+        }
+      ]
+    },
+  },
   devtools: { enabled: true },
   modules: ['@nuxt/content']
 })
