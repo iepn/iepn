@@ -15,13 +15,13 @@ export default defineNuxtConfig({
     head: {
       "script": [
         {
-          type:"text/javascript", body: true, src: '/clarity.js'
+          type:"text/javascript", body: true, src: '~/assets/js/clarity.js'
         }
       ]
     },
   },
   devtools: { enabled: true },
-  modules: ['@nuxt/content','nuxt-gtag'],
+  modules: ['@nuxt/content','nuxt-clarity-analytics','nuxt-gtag'],
   MICROSOFT_CLARITY_ID: 'kso8ok34uv',
   gtag: {
     id: 'G-ESEYFS53HH'
