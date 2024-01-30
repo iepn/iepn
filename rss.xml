@@ -4,7 +4,7 @@
         <description><![CDATA[RHYME.Q 韵清]]></description>
         <link>https://iepn.pages.dev</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 28 Jan 2024 17:45:49 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 30 Jan 2024 09:01:48 GMT</lastBuildDate>
         <atom:link href="https://iepn.pages.dev/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[江雪联合实验室銮音项目]]></title>
@@ -25,7 +25,14 @@
             <description><![CDATA[在谈及 舆情 之前、我相信有很多人会脸色一变觉得这种类似的分析项目就是普通的数据抓取和分析，甚至是直接看社交平台（含短视频平台）的数据进行反馈。]]></description>
             <link>iepn.pages.dev/work/jiangxue-tianyan-internet-public-opinion-platform</link>
             <guid isPermaLink="true">iepn.pages.dev/work/jiangxue-tianyan-internet-public-opinion-platform</guid>
-            <pubDate>Fri, 25 Aug 2023 00:00:00 GMT</pubDate>
+            <pubDate>Sat, 05 Aug 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[To Web3]]></title>
+            <description><![CDATA[帮朋友设计的一个项目，采用了大量二次元设计元素和呈现方式，主打ACG。然而，时隔一年发现该项目仍然停滞不前，甚至域名都尚未购买。]]></description>
+            <link>iepn.pages.dev/work/to-web3-navigation</link>
+            <guid isPermaLink="true">iepn.pages.dev/work/to-web3-navigation</guid>
+            <pubDate>Wed, 27 Sep 2023 00:00:00 GMT</pubDate>
         </item>
     </channel>
 </rss>
