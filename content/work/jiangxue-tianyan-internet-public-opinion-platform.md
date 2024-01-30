@@ -3,7 +3,7 @@
 "description": "在谈及 舆情 之前、我相信有很多人会脸色一变觉得这种类似的分析项目就是普通的数据抓取和分析，甚至是直接看社交平台（含短视频平台）的数据进行反馈。"
 "director": "RHYME.Q"
 "types": "RESEARCH"
-"release_date": 2023.08.25
+"release_date": 2023.08.05
 "demo": "https://gateway.tianyan.jiangxue.org/"
 "images": "/images/pages/tianyan-opinion/1.png"
 ---

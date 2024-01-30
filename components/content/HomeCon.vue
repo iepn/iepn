@@ -132,6 +132,7 @@ const getCurrentPageData = computed(() => {
   margin-top: 15px;
   margin-bottom: 15px;
   height: 753px;
+  background-position: left bottom !important;
   background-size: cover !important;
 }
 @media screen and (min-width: 2000px) {
