@@ -3,20 +3,22 @@
 </script>
 
 <template>
-  <main>
+  <main id="page-tips-main">
     <slot></slot>
   </main>
 </template>
 
-<style scoped>
- img {
+<style >
+ #page-tips-main img {
    width: 100% !important;
-   margin-bottom: 6px;
+   padding-bottom: 5px;
  }
- main {
+ #page-tips-main {
    color: #b6b6b6;
    font-size: small;
    margin-top: 19px;
    margin-bottom: 19px;
+   display: flex;
+   flex-direction: column;
  }
 </style>
