@@ -18,10 +18,28 @@
       <p>Designed, Developed, and Written by Rhyme.Q ❄️<br>Copyright © 2013 - 2024 RHYME Q. All Rights Reserved. 韵清 版权所有</p>
       <p id="dep"><a href="https://github.com/iepn/iepn/commits/main/">DEPLOY workflows: {{ firstSha }}</a></p>
     </div>
+    <div class="google-tran">
+      <GoogleTranslateSelect
+          default-language-code="en"
+          default-page-language-code="zh"
+          :fetch-browser-language="false"
+          trigger="click"
+          @select="handleGoogleTranslateSelect"
+      />
+    </div>
   </div>
 </template>
 
+
 <style scoped>
+.google-tran :nth-child(1) {
+  background-image: none !important;
+  width: auto !important;
+  padding: 0;
+  margin: 0;
+  color: #8e8e8e;
+}
+
 #dep {
   text-transform: uppercase;
 }
@@ -58,7 +76,10 @@
 </style>
 
 <script setup lang="ts">
+import GoogleTranslateSelect from '@google-translate-select/vue3';
 
+const handleGoogleTranslateSelect = (language: any) => {
+}
 import { ref, onMounted } from 'vue';
 
 const commitsData = ref([]);

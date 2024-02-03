@@ -15,5 +15,8 @@
     "rehype-katex": "^7.0.0",
     "remark-math": "^6.0.0",
     "rss": "^1.2.2"
+  },
+  "dependencies": {
+    "@google-translate-select/vue3": "^0.1.3"
   }
 }

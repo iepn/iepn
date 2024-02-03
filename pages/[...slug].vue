@@ -200,4 +200,18 @@ ul li a:hover {
   color: #213ED4;
   font-weight: bold;
 }
+::selection {
+  background:#213ED4;
+  color: #fff;
+}
+
+::-moz-selection {
+  background:#213ED4;
+  color: #fff;
+}
+
+::-webkit-selection {
+  background:#213ED4;
+  color: #fff;
+}
 </style>
