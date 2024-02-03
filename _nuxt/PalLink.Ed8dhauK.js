@@ -1,1 +1,0 @@
-import{_ as o,o as s,c as t,s as n}from"./entry.jJ-kczNs.js";const c={},r={id:"palLink"};function a(e,_){return s(),t("div",r,[n(e.$slots,"default")])}const d=o(c,[["render",a]]);export{d as default};
