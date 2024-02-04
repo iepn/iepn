@@ -59,8 +59,8 @@ const { data: equalQuery } = await useAsyncData("equal", () => {
             </svg>
           </a>
         </li>
-        <li><NuxtLink to="/about" style="color: #0047e1">About</NuxtLink></li>
-        <li><nuxt-link to="/link-exchange">Link exchange</nuxt-link></li>
+        <li><NuxtLink to="/about" activeClass="active-link">About</NuxtLink></li>
+        <li><nuxt-link to="/link-exchange" activeClass="active-link">Link exchange</nuxt-link></li>
       </ul>
       <div class="column is-two-thirds body-content-layout">
         <main class="body-con-main">

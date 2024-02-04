@@ -2,7 +2,7 @@
 "title": Myung 
 "description": "我为此设计了一个看起来非常典雅的 Logo，尤其是那个红色印章显得富有文化底蕴。最初，我想将它命名为明，寓意点亮未来的道路。后来，我又想为它赋予一个充满潜力的理念。"
 "director": "RHYME.Q"
-"types": "RESEARCH"
+"types": "SECURITY"
 "release_date": 2024.01.31
 "demo": "#in development"
 "images": "/images/pages/myung/1.png"
@@ -22,13 +22,17 @@
 
 我为此设计了一个看起来非常典雅的 Logo，尤其是那个红色印章显得富有文化底蕴。最初，我想将它命名为 "明"，寓意点亮未来的道路。后来，我又想为它赋予一个充满潜力的理念。
 
-虽然还没有着手设计 Myung 的官网，但我已经可以想象到一个扇子、然后每个扇叶中有不同画卷和水墨风格的动态效果的美术呈现，一定惊艳无比。唯一需要担心的就是设计上我需要花多少功夫去弄特效，和我能不能实现其 Myung 的核心逻辑。
+虽然还没有着手设计 Myung 的官网，但我已经可以想象到一个扇子、然后每个扇叶中有不同画卷和水墨风格的动态效果的美术呈现，一定惊艳无比。
+
+唯一需要担心的就是设计上我需要花多少功夫去弄特效（ Gsap+Three 的配合所呈现的效果肯定很棒），和我能不能实现其 Myung 的核心逻辑（相当于是一个新的数据存储和缓存逻辑）
 
 众所周知，前端已经拥有 SSG（Static Site Generation，静态站点生成）方案，而我希望将这种方案应用到后端服务中，使 API 具有类似 SSG 的功能，即 SDG（Static Data Generation，静态数据生成）。
 
-但是目前我只想到了应对 GET 请求的方案，对于 GET 请求，我有一个完整的处理思路。
+但是目前我只想到了应对 GET 请求的方案，对于 GET 请求，目前有一个完整的处理思路。
 
 我将首先提供一个支持 Vert.x 的包，可以通过 Maven、Gradle 引入依赖。然后，在构建 API 时，可以在 Gateway、Controller、Routing 或任何涉及 RESTful API 的构建位置引入 Myung。
+
+（或者直接开坑写一个缓存数据框架也是有可能的。感谢 dragove 的新点子。）
 
 届时，Myung 会像沙漏一样，每十分钟获取一次数据库数据（时间可自行配置）。然后，它会拦截并替换来自 Myung 构建的静态 API 数据。
 
@@ -48,13 +52,19 @@
 
 因此，除非未来有新的 RFC 和传输协议的支持，并经过数年的推动和标准化，否则无法实现绝对的安全操作，更多的是增加攻击成本。
 
+::img-tips
+<img src="/images/info/5/3.png" >
+图源 1 | 就像 MLS 一样在 CCC 那样 2023 年 7 月提出的提案被 Discord、Matrix、Wire 所应用（Matrix真的很安全）。
+https://events.ccc.de/congress/2023/hub/en/event/rfc_9420_or_how_to_scale_end-to-end_encryption_with_messaging_layer_security/
+::
+
 或者。目前有一个更加理想的状态去完成 POST 的操作，即用户密钥（Face ID 或 Touch ID）这种方式通常仅在较为严重的用户决策时进行验证（大多是 API 调用次数要钱，因此很节约）
 
 如果未来琼楼搭配 Myung 共同完成这个 IDEA。我想、这可能是目前前端组件库中，为数不多考虑安全性的开源项目。
 
 ::img-tips
 <img src="/images/info/5/1.jpg" >
-图源 1 | CVE-2023-22527:RCE (Remote Code Execution) Vulnerability
+图源 2 | CVE-2023-22527:RCE (Remote Code Execution) Vulnerability
 https://t.me/Oracleimpact/901 | Thank: Nian
 ::
 
@@ -62,7 +72,7 @@ https://t.me/Oracleimpact/901 | Thank: Nian
 
 ::img-tips
 <img src="/images/info/5/2.png" >
-图源 2 | “Linux 中国” 开源社区，停止运营
+图源 3 | “Linux 中国” 开源社区，停止运营
 https://linux.cn/article-16602-1.html
 ::
 
@@ -83,7 +93,6 @@ https://linux.cn/article-16602-1.html
 ::page-info
 *并没有攻击 Linux.cn 是逐利的意思，而是说公司就是公司，公司的目的就是赚钱的。衡量一个公司的好坏就是提供了多少的就业岗位，每年的利润有多少、交了多少税。其次才是社会贡献等方面综合因素衡量，如果格局大一点还可以引入 ESG（环境、社会与治理,Environmental, social, and corporate governance）作为参考标准。
 ::
-
 
 但如果是新闻资讯和媒体方面的开源社区，又不愿意进行推广、炒作和私域等活动，也没有核心的技术和用户所需的需求，那自然会变得困难。
 

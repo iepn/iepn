@@ -4,7 +4,7 @@
 "director": "RHYME.Q"
 "types": "DESIGN"
 "release_date": 2023.09.27
-"demo": "#in develop"
+"demo": "#IN DEVELOPMENT"
 "images": "/images/pages/to-web3/1.png"
 ---
 # To Web3 navigate

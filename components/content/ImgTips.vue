@@ -8,8 +8,12 @@
   </main>
 </template>
 
-<style >
+<style>
  #page-tips-main img {
+   width: 100% !important;
+   padding-bottom: 5px;
+ }
+ #page-tips-main video {
    width: 100% !important;
    padding-bottom: 5px;
  }

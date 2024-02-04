@@ -59,7 +59,9 @@ https://como.ceb.cam.ac.uk/media/preprints/c4e-preprint-310.pdf
 
 像是图 3 这种直接在关系图里直接通过描述词然后让 ROG Agent 直接执行和调用的，还是很新颖的。江雪目前更多的是通过 Code 模块化的预设命令完成这种操作。感觉很像 [obsidian](https://obsidian.md/) 的知识图谱，通过这种方式呈现的效果感觉比看状态、日志的效果更加直观。
 
-目前，虹霓通常的架构基本上都是通过 [Neo4j](https://neo4j.com/) 存储和查询关系比较方便，查询速度也很快，再加上 [Vertx Framework](https://vertx.io/docs/) 非常适合计算数据庞大且需要经常查询的计算结果。
+目前，虹霓通常的架构基本上都是通过 [Neo4j](https://neo4j.com/) 存储和查询关系比较方便，查询速度也很快，再加上 [Vertx Framework](https://vertx.io/docs/) 非常适合计算数据庞大且需要经常查询的计算结果。 但存在一个问题，就是说这些数据拥有较强的关联性且庞大的数据，存在较高的可攻击性，且任何一个节点的修改，性能上存在较高的资源浪费。
+
+未来也许可能通过 Myung 解决这些问题。
 
 :page-tips
 
