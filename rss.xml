@@ -4,7 +4,7 @@
         <description><![CDATA[RHYME.Q 韵清]]></description>
         <link>https://iepn.pages.dev</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 03 Feb 2024 06:48:40 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 04 Feb 2024 23:21:45 GMT</lastBuildDate>
         <atom:link href="https://iepn.pages.dev/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[江雪联合实验室銮音项目]]></title>
@@ -33,6 +33,13 @@
             <link>iepn.pages.dev/work/jiangxue-tianyan-internet-public-opinion-platform</link>
             <guid isPermaLink="true">iepn.pages.dev/work/jiangxue-tianyan-internet-public-opinion-platform</guid>
             <pubDate>Sat, 05 Aug 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[琼楼组件库设计]]></title>
+            <description><![CDATA[说实话我与前端的接触并不多，如果说最多的无非是小学时对拥有一台服务器、域名和论坛的盲目追崇。当时的 Xiuno BBS 还火极一时（因为安装很方便，就是那种无脑下一步即可的），之后接触到了 WordPress、 Discuz x!、z-blog、MediaWiki 但都没有我喜欢的。]]></description>
+            <link>iepn.pages.dev/work/qionglou-component-library</link>
+            <guid isPermaLink="true">iepn.pages.dev/work/qionglou-component-library</guid>
+            <pubDate>Sat, 22 Apr 2023 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[To Web3]]></title>
