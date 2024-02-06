@@ -55,9 +55,7 @@
 生成出来的角色手部、裙子和脸有了很多问题所以当时我用数位板进行了稍微地结构性的调整了一下。
 
 ::img-tips
-<video controls >
-  <source src="/images/info/4/2.mp4" type="video/mp4" />
-</video>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/910286322?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="現実世界の歌手の声抽出による AI 二次最適化とシミュレーション"></iframe></div>
 视频 1 | 通过对现实世界歌手声音的提取 AI 二次优化和模拟@江雪銮音实验室 https://music.163.com/song?id=2075128378&userid=1548171212
 ::
 

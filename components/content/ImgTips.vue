@@ -11,11 +11,15 @@
 <style>
  #page-tips-main img {
    width: 100% !important;
-   padding-bottom: 5px;
+   margin-bottom: 5px;
  }
  #page-tips-main video {
    width: 100% !important;
-   padding-bottom: 5px;
+   margin-bottom: 5px;
+ }
+ #page-tips-main div {
+   width: 100% !important;
+   margin-bottom: 5px;
  }
  #page-tips-main {
    color: #b6b6b6;
