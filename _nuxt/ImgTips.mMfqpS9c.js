@@ -1,0 +1,1 @@
+import{_ as s,o as t,c as o,s as n}from"./entry.nI4BXkeA.js";const a={},c={id:"page-tips-main"};function r(e,_){return t(),o("main",c,[n(e.$slots,"default")])}const d=s(a,[["render",r]]);export{d as default};

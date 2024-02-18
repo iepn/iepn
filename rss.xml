@@ -4,7 +4,7 @@
         <description><![CDATA[RHYME.Q 韵清]]></description>
         <link>https://iepn.pages.dev</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 17 Feb 2024 05:46:44 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 18 Feb 2024 14:15:55 GMT</lastBuildDate>
         <atom:link href="https://iepn.pages.dev/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[江雪联合实验室銮音项目]]></title>
@@ -40,6 +40,13 @@
             <link>iepn.pages.dev/work/qionglou-component-library</link>
             <guid isPermaLink="true">iepn.pages.dev/work/qionglou-component-library</guid>
             <pubDate>Sat, 22 Apr 2023 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[江雪联合实验室銮音项目]]></title>
+            <description><![CDATA[江雪之前已经成立和组建了一个虹霓实验室，但由于虹霓主要专注于天演计算、分析等方面的项目和边缘领域，因此将一些辅助性的项目划分给了銮音。銮音的名字取自《说文》中的:人君乘车四马四镳八銮，铃象鸾，鸟声，和则敬也。]]></description>
+            <link>iepn.pages.dev/work/test</link>
+            <guid isPermaLink="true">iepn.pages.dev/work/test</guid>
+            <pubDate>Tue, 25 Apr 2023 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[To Web3]]></title>
