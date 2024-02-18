@@ -1,18 +1,14 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 
-// 设置 ref 变量存储当前月份的图片路径
 const currentMonthImage = ref<string>("");
-// 设置 ref 变量存储当前页数
 const currentPage = ref<number>(1);
-// 设置每页显示的数量
 const itemsPerPage = 5;
 
 onMounted(() => {
   setCurrentMonthImage();
 });
 
-// 获取当前月份
 const setCurrentMonthImage = () => {
   const currentMonth = new Date().getMonth() + 1;
   currentMonthImage.value = `/images/calendar/${currentMonth}.webp`;
@@ -28,7 +24,7 @@ const { data: equalQuery } = await useAsyncData("equal", () => {
 equalQuery.value?.sort((a, b) => {
   const dateA = new Date(a.release_date).getTime();
   const dateB = new Date(b.release_date).getTime();
-  return dateB - dateA; // 从最新到最旧排序
+  return dateB - dateA;
 });
 
 // 计算总页数
@@ -45,9 +41,17 @@ const getCurrentPageData = computed(() => {
   const endIndex = currentPage.value * itemsPerPage;
   return equalQuery.value?.slice(startIndex, endIndex) || [];
 });
+
+// fix generate page show error
+const getAllData = computed(() => {
+  return equalQuery.value || [];
+});
 </script>
 
 <template>
+    <div v-for="all in getAllData" :key="all.id" style="display: none;">
+        <NuxtLink :to="all._path" />
+    </div>
   <div class="column  body-content-layout">
     <div class="body-con-main" v-if="equalQuery" v-for="all in getCurrentPageData" :key="all.id">
       <ul class="body-con-main_title">
