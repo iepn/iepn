@@ -113,7 +113,6 @@ a {
   padding-top: 20px;
 }
 
-
 .body-content {
   width: 45%;
   margin: 0 auto;

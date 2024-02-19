@@ -52,7 +52,7 @@ const getAllData = computed(() => {
     <div v-for="all in getAllData" :key="all.id" style="display: none;">
         <NuxtLink :to="all._path" />
     </div>
-  <div class="column  body-content-layout">
+  <div class="column body-content-layout">
     <div class="body-con-main" v-if="equalQuery" v-for="all in getCurrentPageData" :key="all.id">
       <ul class="body-con-main_title">
         <li class="body-con-main_title__top"></li>
