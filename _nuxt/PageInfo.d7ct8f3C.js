@@ -1,1 +1,0 @@
-import{_ as o}from"./_plugin-vue_export-helper.x3n3nnut.js";import{o as t,c as r,s}from"./entry.1Dc10cM6.js";const n={},c={id:"page-info_md"};function a(e,_){return t(),r("div",c,[s(e.$slots,"default")])}const i=o(n,[["render",a]]);export{i as default};
