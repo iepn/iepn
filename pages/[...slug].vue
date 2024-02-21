@@ -24,6 +24,9 @@ onMounted(() => {
 const isCurrentPage = (paths: string[]) => {
   return paths.some(path => currentUrl.value.includes(path));
 };
+const isHomePage = () => {
+  return currentUrl.value.endsWith('/');
+};
 </script>
 
 <template>
@@ -35,7 +38,7 @@ const isCurrentPage = (paths: string[]) => {
         <div class="body-content-fixed">
           <div>
             <div class="body-about-click">
-              <NuxtLink to="/" style="color: #9C9C9C" activeClass="active-link">HOME</NuxtLink>
+              <a href="/" style="color: #9C9C9C" :class="{ 'active-link': isHomePage() }">HOME</a>
             </div>
             <calendar :moon="currentMonthImage" />
           </div>
