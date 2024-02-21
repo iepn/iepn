@@ -21,8 +21,8 @@ onMounted(() => {
   currentUrl.value = window.location.href;
 });
 
-const isCurrentPage = (path: string) => {
-  return currentUrl.value.includes(path);
+const isCurrentPage = (paths: string[]) => {
+  return paths.some(path => currentUrl.value.includes(path));
 };
 </script>
 
@@ -45,7 +45,7 @@ const isCurrentPage = (path: string) => {
               <li>design</li>
               <li>develop</li>
               <li>research</li>
-              <li><NuxtLink to="/security" :class="{ 'active-link': isCurrentPage('/security') }" external>security</NuxtLink></li>
+              <li><NuxtLink to="/security" :class="{ 'active-link': isCurrentPage(['/security', '/credit']) }" external>security</NuxtLink></li>
               <li><NuxtLink to="/link-exchange" activeClass="active-link">Link exchange</NuxtLink></li>
             </ul>
             <a href="https://www.cloudflare.com/" class="body-con-support">
