@@ -15,12 +15,15 @@ const setCurrentMonthImage = () => {
   const currentMonth = new Date().getMonth() + 1; // 注意：getMonth 返回的是 0 到 11，所以要加 1
   currentMonthImage.value = `${currentMonth}`; // 假设图片名称为月份.jpg
 };
+const currentUrl = ref<string>('');
 
-// 使用 useAsyncData 函数发起异步请求
-const { data: equalQuery } = await useAsyncData("equal", () => {
-  // 返回 /more 目录下的数据，也可以（.where({ director: 'Hayao Miyazaki' }) 来进行过滤）
-  return queryContent("work/").find();
+onMounted(() => {
+  currentUrl.value = window.location.href;
 });
+
+const isCurrentPage = (path: string) => {
+  return currentUrl.value.includes(path);
+};
 </script>
 
 <template>
@@ -42,7 +45,7 @@ const { data: equalQuery } = await useAsyncData("equal", () => {
               <li>design</li>
               <li>develop</li>
               <li>research</li>
-              <li>security</li>
+              <li><NuxtLink to="/security" :class="{ 'active-link': isCurrentPage('/security') }" external>security</NuxtLink></li>
               <li><NuxtLink to="/link-exchange" activeClass="active-link">Link exchange</NuxtLink></li>
             </ul>
             <a href="https://www.cloudflare.com/" class="body-con-support">

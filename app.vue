@@ -12,6 +12,16 @@ const colorMode = useColorMode()
 body {
   background-color: #fff;
 }
+@media screen and (min-width: 1024px) {
+    .column {
+        padding: 0px !important;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .column {
+        padding: 0.45rem !important;
+    }
+}
 .dark-mode body {
   position: fixed;
   top: 0;
@@ -25,7 +35,10 @@ body {
   width: 0px;
   background-color: transparent;
 }
-.dark-mode .body-con-main__img, .slides {
+.dark-mode hr {
+    background-color: #eaeaea;
+}
+.dark-mode .body-con-main__img, .slides, #page-tips-main {
     opacity: 0.7;
 }
 </style>

@@ -1,4 +1,12 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
+const selectedTab = ref('security');
+
+const selectTab = (tab: string) => {
+  selectedTab.value = tab;
+};
+
 import { ref, computed } from 'vue';
 
 const currentPage = ref<number>(1);
@@ -20,7 +28,7 @@ const itemsPerPage = 5;
 
 const { data: equalQuery } = await useAsyncData("equal", () => {
   // 返回 /more 目录下的数据，也可以（.where({ director: 'Hayao Miyazaki' }) 来进行过滤）
-  return queryContent("work/").find();
+    return queryContent("credit/").where({ types: 'CREDIT' }).find();
 });
 
 // 排序
@@ -49,64 +57,50 @@ const getCurrentPageData = computed(() => {
 const getAllData = computed(() => {
   return equalQuery.value || [];
 });
+
+const currentUrl = ref<string>('');
+
+onMounted(() => {
+  currentUrl.value = window.location.href;
+});
+
+const isCurrentPage = (path: string) => {
+  return currentUrl.value.includes(path);
+};
 </script>
 
 <template>
-<!-- Fix output error -->
-  <div v-for="all in getAllData" :key="all.id" style="display: none;">
-    <NuxtLink :to="all._path" />
-  </div>
-  <!-- True output -->
-  <!-- <div v-if="props.pages !== 'credit'" class="column body-content-layout"> -->
-  <div class="column body-content-layout">
-    <div class="body-con-main" v-if="equalQuery" v-for="all in getCurrentPageData" :key="all.id">
-      <ul class="body-con-main_title">
-        <li class="body-con-main_title__top"></li>
-        <li style="color: #000000;font-weight: bold">{{ all.title }}</li>
-        <li>{{ all.types }}</li>
-        <li>{{  all.release_date }}</li>
-      </ul>
-      <p>{{ all._PATH }}</p>
-      <NuxtLink :to="all._path"><div class="body-con-main__img" :style="{ background: 'left no-repeat url(' + all.images + ')' }"></div></NuxtLink>
-        <div id="auther">
-          <a :href="all.demo" target="_blank">{{ all.demo }}</a>
-          <p>BY: {{ all.director }}</p>
+    <main>
+      <div class="view-sec_layout">
+        <div>
+            <h1>Security</h1>
+            <PageBack />
         </div>
-    </div>
-    <div class="pagination-layout">
-      <div id="pageto">
-        <p @click="paginate(currentPage - 1)"
-             :style="{ display: currentPage === 1 ? 'none' : 'inline-block' }"
-        >PREV</p>
-        <p @click="paginate(currentPage + 1)"
-           :style="{ display: currentPage === totalPages ? 'none' : 'inline-block' }"
-        >NEXT</p>
-        <p>PAGE: {{ currentPage }}</p>
-      </div>
-      <div id="pagenum">
-        <div v-for="page in totalPages" :key="page">
-          <p style="color: #cfcfcf;" @click="paginate(page)" :class="{ active: page === currentPage, firstPage: page === currentPage }">{{ page }}</p>
+        <div class="view-sec_button">
+            <NuxtLink to="/security" :class="{ 'active-link': isCurrentPage('/security') }" external><p>article</p></NuxtLink>
+            <NuxtLink to="/credit" :class="{ 'active-link': isCurrentPage('/credit') }" external><p>Credit</p></NuxtLink>
         </div>
       </div>
-    </div>
-  </div>
-  <!-- security credit -->
-  <!-- <div v-if="props.pages === 'credit'" class="credit-layout">
-    <div class="body-con-credit-main" v-if="equalQuery" v-for="all in getCurrentPageData" :key="all.id">
-      <NuxtLink :to="all._path">
-      <div class="credit-con_title">
-        <img :src="all.platform" />
-        <p>{{ all.title }}<br><span style="font-weight: 300;">{{ all.vulnerability }} - <span style="font-size: small;font-weight: 300;">{{ all.release_date }}</span></span></p>
-        <a :href="all.demo">SOURCE: {{ all.demo }}</a>
-      </div>
-        <div class="body-con-credit__img" :style="{ background: 'left no-repeat url(' + all.images + ')' }">
+      <div :key="selectedTab" v-show="true" :id="selectedTab">
+        <!-- security credit -->
+        <div class="credit-layout">
+            <div class="body-con-credit-main" v-if="equalQuery" v-for="all in getCurrentPageData" :key="all.id">
+            <NuxtLink :to="all._path">
+            <div class="credit-con_title">
+                <img :src="all.platform" />
+                <p>{{ all.title }}<br><span style="font-weight: 300;">{{ all.vulnerability }} - <span style="font-size: small;font-weight: 300;">{{ all.release_date }}</span></span></p>
+                <a :href="all.demo">SOURCE: {{ all.demo }}</a>
+            </div>
+                <div class="body-con-credit__img" :style="{ background: 'left no-repeat url(' + all.images + ')' }">
+                </div>
+            </NuxtLink>
+            </div>
         </div>
-      </NuxtLink>
-    </div>
-  </div> -->
-</template>
-
-<style scoped>
+      </div>
+    </main>
+  </template>
+  
+  <style scoped>
 .body-con-credit-main {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -150,6 +144,25 @@ const getAllData = computed(() => {
 }
 
 /* security */
+.view-sec_layout {
+    display: flex;
+  }
+
+  .view-sec_button {
+    text-orientation: upright;
+    padding: 0px;
+    margin: 0px;
+    line-height: normal;
+    display: flex;
+  }
+  .view-sec_button p {
+      text-transform: uppercase;
+      cursor: pointer;
+      margin: 0 10px;
+      padding: 0px;
+      margin-right: 3px;
+      color: #8a8a8a !important;
+    }
 .pagination-layout p.active {
   font-weight: bold;
 }
@@ -249,4 +262,5 @@ ul {
   text-transform: uppercase;
   color: #9C9C9C;
 }
-</style>
+  </style>
+  
