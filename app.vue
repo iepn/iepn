@@ -41,4 +41,8 @@ body {
 .dark-mode .body-con-main__img, .slides, #page-tips-main {
     opacity: 0.7;
 }
+.sepia-mode .body-con-main__img, .slides, #page-tips-main {
+    opacity: 1;
+}
+
 </style>

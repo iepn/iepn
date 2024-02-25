@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref } from "vue";
 
-const selectedTab = ref('security');
+const selectedTab = ref("security");
 
 const selectTab = (tab: string) => {
   selectedTab.value = tab;
 };
 
-import { ref, computed } from 'vue';
+import { ref, computed } from "vue";
 
 const currentPage = ref<number>(1);
 const itemsPerPage = 5;
@@ -28,7 +28,7 @@ const itemsPerPage = 5;
 
 const { data: equalQuery } = await useAsyncData("equal", () => {
   // 返回 /more 目录下的数据，也可以（.where({ director: 'Hayao Miyazaki' }) 来进行过滤）
-    return queryContent("credit/").where({ types: 'CREDIT' }).find();
+  return queryContent("credit/").where({ types: "CREDIT" }).find();
 });
 
 // 排序
@@ -44,7 +44,7 @@ const totalPages = Math.ceil(equalQuery.value?.length / itemsPerPage);
 // 分页逻辑
 const paginate = (page: number) => {
   currentPage.value = page;
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 };
 
 const getCurrentPageData = computed(() => {
@@ -58,7 +58,7 @@ const getAllData = computed(() => {
   return equalQuery.value || [];
 });
 
-const currentUrl = ref<string>('');
+const currentUrl = ref<string>("");
 
 onMounted(() => {
   currentUrl.value = window.location.href;
@@ -70,71 +70,95 @@ const isCurrentPage = (path: string) => {
 </script>
 
 <template>
-    <main>
-      <div class="view-sec_layout">
-        <div>
-            <h1>Security</h1>
-            <PageBack />
-        </div>
-        <div class="view-sec_button">
-            <NuxtLink to="/security" :class="{ 'active-link': isCurrentPage('/security') }" external><p>article</p></NuxtLink>
-            <NuxtLink to="/credit" :class="{ 'active-link': isCurrentPage('/credit') }" external><p>Credit</p></NuxtLink>
-        </div>
+  <main>
+    <div class="view-sec_layout">
+      <div>
+        <h1>Security</h1>
+        <PageBack />
       </div>
-      <div :key="selectedTab" v-show="true" :id="selectedTab">
-        <!-- security credit -->
-        <div class="credit-layout">
-            <div class="body-con-credit-main" v-if="equalQuery" v-for="all in getCurrentPageData" :key="all.id">
-            <NuxtLink :to="all._path">
+      <div class="view-sec_button">
+        <NuxtLink
+          to="/security"
+          :class="{ 'active-link': isCurrentPage('/security') }"
+          external
+          ><p>article</p></NuxtLink
+        >
+        <NuxtLink
+          to="/credit"
+          :class="{ 'active-link': isCurrentPage('/credit') }"
+          external
+          ><p>Credit</p></NuxtLink
+        >
+      </div>
+    </div>
+    <div :key="selectedTab" v-show="true" :id="selectedTab">
+      <!-- security credit -->
+      <div class="credit-layout">
+        <div
+          class="body-con-credit-main"
+          v-if="equalQuery"
+          v-for="all in getCurrentPageData"
+          :key="all.id"
+        >
+          <NuxtLink :to="all._path">
             <div class="credit-con_title">
-                <img :src="all.platform" />
-                <p>{{ all.title }}<br><span style="font-weight: 300;">{{ all.vulnerability }} - <span style="font-size: small;font-weight: 300;">{{ all.release_date }}</span></span></p>
-                <a :href="all.demo">SOURCE: {{ all.demo }}</a>
+              <img :src="all.platform" />
+              <p>
+                {{ all.title }}<br /><span style="font-weight: 300"
+                  >{{ all.vulnerability }} -
+                  <span style="font-size: small; font-weight: 300">{{
+                    all.release_date
+                  }}</span></span
+                >
+              </p>
+              <a :href="all.demo">SOURCE: {{ all.demo }}</a>
             </div>
-                <div class="body-con-credit__img" :style="{ background: 'left no-repeat url(' + all.images + ')' }">
-                </div>
-            </NuxtLink>
-            </div>
+            <div
+              class="body-con-credit__img"
+              :style="{ background: 'left no-repeat url(' + all.images + ')' }"
+            ></div>
+          </NuxtLink>
         </div>
       </div>
-    </main>
-  </template>
-  
-  <style scoped>
+    </div>
+  </main>
+</template>
+
+<style scoped>
 .body-con-credit-main {
-    transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .body-con-credit-main:hover {
-    transform: scale(1.02);
-    opacity: 0.9;
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 .credit-con_title {
-    position: absolute;
-    padding: 23px;
-    padding-top: 45px;
-    max-width: 440px;
-    text-align: inherit;
+  position: absolute;
+  padding: 23px;
+  padding-top: 45px;
+  max-width: 440px;
+  text-align: inherit;
 }
 .credit-con_title p {
-    font-weight: bold;
-    font-size: 16px;
+  font-weight: bold;
+  font-size: 16px;
 }
 .credit-con_title span {
-    font-weight: bold;
-    font-size: 14px;
-    text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 .credit-con_title a {
-    text-transform: uppercase;
-    font-size: small;
-    color: #ffffff5c;
-    mix-blend-mode: exclusion;
+  text-transform: uppercase;
+  font-size: small;
+  color: #ffffff5c;
+  mix-blend-mode: exclusion;
 }
 .credit-layout {
-    margin-top: -10px;
+  margin-top: -10px;
 }
 .body-con-credit__img {
-  width: 100% ;
+  width: 100%;
   margin-top: 15px;
   margin-bottom: 15px;
   height: 260px;
@@ -145,24 +169,24 @@ const isCurrentPage = (path: string) => {
 
 /* security */
 .view-sec_layout {
-    display: flex;
-  }
+  display: flex;
+}
 
-  .view-sec_button {
-    text-orientation: upright;
-    padding: 0px;
-    margin: 0px;
-    line-height: normal;
-    display: flex;
-  }
-  .view-sec_button p {
-      text-transform: uppercase;
-      cursor: pointer;
-      margin: 0 10px;
-      padding: 0px;
-      margin-right: 3px;
-      color: #8a8a8a !important;
-    }
+.view-sec_button {
+  text-orientation: upright;
+  padding: 0px;
+  margin: 0px;
+  line-height: normal;
+  display: flex;
+}
+.view-sec_button p {
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 0 10px;
+  padding: 0px;
+  margin-right: 3px;
+  color: #8a8a8a !important;
+}
 .pagination-layout p.active {
   font-weight: bold;
 }
@@ -182,7 +206,7 @@ const isCurrentPage = (path: string) => {
 }
 /* 添加 firstPage 类的样式，以设置第一页的特殊样式 */
 .pagination-layout p.firstPage {
-  color: #213ED4 !important;
+  color: #213ed4 !important;
 }
 .pagination-layout {
   cursor: pointer;
@@ -199,7 +223,7 @@ const isCurrentPage = (path: string) => {
   height: 30px;
 }
 #auther a {
-  color: #9C9C9C;
+  color: #9c9c9c;
   word-break: break-all;
   line-height: initial;
 }
@@ -208,7 +232,7 @@ const isCurrentPage = (path: string) => {
   padding-top: 20px;
 }
 .body-con-main__img {
-  width: 100% ;
+  width: 100%;
   margin-top: 15px;
   margin-bottom: 15px;
   height: 753px;
@@ -217,7 +241,7 @@ const isCurrentPage = (path: string) => {
   transition: transform 0.3s ease;
 }
 .body-con-main__img:hover {
-    transform: scale(1.02);
+  transform: scale(1.02);
 }
 @media screen and (min-width: 2000px) {
   .body-con-main__img {
@@ -237,8 +261,6 @@ const isCurrentPage = (path: string) => {
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml,%3Csvg width='75' height='4' viewBox='0 0 75 4' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 2H75' stroke='%23213ED4' stroke-width='3'/%3E%3C/svg%3E%0A");
 }
-
-
 
 @media screen and (max-width: 600px) {
   .body-con-main__img {
@@ -260,7 +282,6 @@ ul {
   padding: 0;
   margin: 0;
   text-transform: uppercase;
-  color: #9C9C9C;
+  color: #9c9c9c;
 }
-  </style>
-  
+</style>

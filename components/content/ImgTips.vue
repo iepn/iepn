@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <main id="page-tips-main">
+  <main id="page-tips-main" class="page-tips-main">
     <slot></slot>
   </main>
 </template>
