@@ -1,1 +1,0 @@
-import{_ as o}from"./_plugin-vue_export-helper.x3n3nnut.js";import{o as s,c as t,s as r}from"./entry.JtuDqNR9.js";const n={},a={id:"page-tips-main"};function c(e,i){return s(),t("main",a,[r(e.$slots,"default")])}const f=o(n,[["render",c]]);export{f as default};
