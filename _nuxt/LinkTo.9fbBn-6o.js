@@ -1,1 +1,0 @@
-import{_ as e}from"./_plugin-vue_export-helper.x3n3nnut.js";import{o as t,c as r,s}from"./entry.pA4HF_El.js";const n={},c={id:"linkTo"};function a(o,_){return t(),r("ul",c,[s(o.$slots,"default")])}const i=e(n,[["render",a]]);export{i as default};
