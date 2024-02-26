@@ -1,72 +1,130 @@
-
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from "vue";
 
-// 设置 ref 变量存储当前月份的图片路径
 const currentMonthImage = ref<string>("");
 
-// 在组件挂载时调用方法设置当前月份的图片路径
 onMounted(() => {
-  setCurrentMonthImage();
+  fetchQuote();
 });
 
-// 获取当前月份
-const setCurrentMonthImage = () => {
-  const currentMonth = new Date().getMonth() + 1; // 注意：getMonth 返回的是 0 到 11，所以要加 1
-  currentMonthImage.value = `${currentMonth}`; // 假设图片名称为月份.jpg
-};
-const currentUrl = ref<string>('');
+const currentUrl = ref<string>("");
 
 onMounted(() => {
   currentUrl.value = window.location.href;
 });
 
 const isCurrentPage = (paths: string[]) => {
-  return paths.some(path => currentUrl.value.includes(path));
+  return paths.some((path) => currentUrl.value.includes(path));
 };
 const isHomePage = () => {
-  return currentUrl.value.endsWith('/');
+  return currentUrl.value.endsWith("/");
+};
+
+const quote = ref("");
+const author = ref("");
+
+const fetchQuote = async () => {
+  try {
+    const response = await fetch("https://api.quotable.io/random");
+    const data = await response.json();
+    quote.value = data.content;
+    author.value = data.author;
+  } catch (error) {
+    console.error(error);
+  }
 };
 </script>
 
 <template>
   <div class="body-content">
-
     <div class="columns">
       <div class="column body-con-nav">
         <!--        日历及导航-->
         <div class="body-content-fixed">
           <div>
             <div class="body-about-click">
-              <a href="/" style="color: #9C9C9C" :class="{ 'active-link': isHomePage() }">HOME</a>
+              <a
+                href="/"
+                style="color: #9c9c9c"
+                :class="{ 'active-link': isHomePage() }"
+                >HOME</a
+              >
             </div>
-            <calendar :moon="currentMonthImage" />
+            <!-- INFO -->
+            <div class="about-slug__layout">
+              <p class="typewriter slug-home_layout">
+                Full-stack development, Security, and Design.
+              </p>
+              <small style="opacity: 0.65">{{ quote }} - {{ author }}</small>
+            </div>
           </div>
-          <div>
+          <!-- INFO END -->
+          <div class="body-con-cal_nav__layout">
             <ul class="body-con-cal_nav">
-              <li><NuxtLink to="/about" activeClass="active-link">about</NuxtLink></li>
-              <li>design</li>
-              <li>develop</li>
-              <li>research</li>
-              <li><NuxtLink to="/security" :class="{ 'active-link': isCurrentPage(['/security', '/credit']) }" external>security</NuxtLink></li>
-              <li><NuxtLink to="/link-exchange" activeClass="active-link">Link exchange</NuxtLink></li>
+              <li>
+                <NuxtLink to="/about" activeClass="active-link">about</NuxtLink>
+              </li>
+              <li>des</li>
+              <li>dev</li>
+              <li>res</li>
+              <li>
+                <NuxtLink
+                  to="/security"
+                  :class="{
+                    'active-link': isCurrentPage(['/security', '/credit']),
+                  }"
+                  external
+                  >sec</NuxtLink
+                >
+              </li>
+              <li>
+                <NuxtLink to="/link-exchange" activeClass="active-link"
+                  >Link</NuxtLink
+                >
+              </li>
             </ul>
-            <a href="https://www.cloudflare.com/" class="body-con-support">
-              <svg xmlns="http://www.w3.org/2000/svg" width="110" fill="none" viewBox="0 0 204 30" style="width: 110px;"><g clip-path="url(#a)"><path fill="#FBAD41" d="M52.688 13.028c-.22 0-.437.008-.654.015a.297.297 0 0 0-.102.024.365.365 0 0 0-.236.255l-.93 3.249c-.401 1.397-.252 2.687.422 3.634.618.876 1.646 1.39 2.894 1.45l5.045.306c.15.008.28.08.359.199a.492.492 0 0 1 .051.434.64.64 0 0 1-.547.426l-5.242.306c-2.848.132-5.912 2.456-6.987 5.29l-.378 1a.28.28 0 0 0 .248.382h18.054a.48.48 0 0 0 .464-.35 13.12 13.12 0 0 0 .48-3.54c0-7.22-5.789-13.072-12.933-13.072"></path><path fill="#000" d="M85.519 18.886h2.99v8.249h5.218v2.647h-8.208V18.886ZM96.819 24.365v-.032c0-3.13 2.493-5.665 5.821-5.665 3.327 0 5.789 2.508 5.789 5.633v.032c0 3.129-2.493 5.665-5.821 5.665s-5.79-2.505-5.79-5.633Zm8.562 0v-.032c0-1.573-1.123-2.942-2.773-2.942-1.65 0-2.725 1.337-2.725 2.91v.032c0 1.572 1.122 2.942 2.757 2.942 1.634 0 2.741-1.338 2.741-2.91ZM112.086 25.003V18.89h3.033v6.055c0 1.572.783 2.317 1.985 2.317 1.201 0 1.985-.717 1.985-2.242v-6.134h3.032v6.039c0 3.519-1.985 5.056-5.049 5.056s-4.99-1.573-4.99-4.98M126.694 18.889h4.159c3.848 0 6.081 2.241 6.081 5.382v.032c0 3.14-2.265 5.477-6.144 5.477h-4.096V18.886v.004Zm4.202 8.216c1.788 0 2.97-.995 2.97-2.754v-.032c0-1.744-1.185-2.755-2.97-2.755h-1.217v5.541h1.217ZM141.277 18.886h8.621v2.648h-5.636v1.85h5.096v2.505h-5.096v3.893h-2.985V18.886ZM154.054 18.886h2.989v8.249h5.219v2.647h-8.208V18.886ZM170.067 18.809h2.878l4.589 10.971h-3.202l-.788-1.946h-4.159l-.768 1.946h-3.143l4.589-10.971h.004Zm2.619 6.676-1.202-3.097-1.217 3.097h2.419ZM181.383 18.889h5.096c1.647 0 2.789.438 3.509 1.182.635.621.954 1.465.954 2.536v.032c0 1.664-.879 2.77-2.218 3.344l2.572 3.797h-3.45l-2.17-3.3h-1.308v3.3h-2.989V18.886l.004.004Zm4.959 5.23c1.016 0 1.602-.497 1.602-1.29v-.031c0-.856-.614-1.29-1.618-1.29h-1.954v2.616h1.973l-.003-.004ZM195.253 18.886h8.669v2.568h-5.711v1.648h5.175v2.384h-5.175v1.728h5.79v2.568h-8.748V18.886ZM78.976 25.642c-.418.956-1.3 1.633-2.47 1.633-1.63 0-2.756-1.37-2.756-2.942V24.3c0-1.573 1.094-2.91 2.725-2.91 1.229 0 2.166.764 2.564 1.807h3.147c-.505-2.591-2.757-4.53-5.683-4.53-3.324 0-5.821 2.536-5.821 5.665v.032c0 3.129 2.461 5.633 5.79 5.633 2.843 0 5.068-1.864 5.655-4.36h-3.155l.004.004Z"></path><path fill="#F6821F" d="m44.808 29.578.334-1.175c.402-1.397.253-2.687-.42-3.634-.62-.876-1.647-1.39-2.896-1.45l-23.665-.306a.467.467 0 0 1-.374-.199.492.492 0 0 1-.052-.434.64.64 0 0 1 .552-.426l23.886-.306c2.836-.131 5.9-2.456 6.975-5.29l1.362-3.6a.914.914 0 0 0 .04-.477C48.998 5.259 42.79 0 35.368 0c-6.842 0-12.647 4.462-14.73 10.665a6.92 6.92 0 0 0-4.911-1.374c-3.28.33-5.92 3.002-6.246 6.318a7.148 7.148 0 0 0 .18 2.472c-5.36.16-9.66 4.598-9.66 10.052 0 .493.035.979.106 1.453a.46.46 0 0 0 .457.402h43.704a.57.57 0 0 0 .54-.418"></path></g><defs><clipPath id="a"><path fill="#FFF" d="M0 0h204v30H0z"></path></clipPath></defs></svg>
-            </a>
+            <div class="body-con-support">
+              <a href="https://github.com/iepn"
+                ><img src="/images/logo/git.svg"
+              /></a>
+              <a href="https://hackerone.com/iepn"
+                ><img src="/images/logo/h1.svg"
+              /></a>
+              <a href="https://www.behance.net/rhymeq"
+                ><img src="/images/logo/be.svg"
+              /></a>
+              <a href="https://www.researchgate.net/profile/Rhyme-Qing"
+                ><img src="/images/logo/res.svg"
+              /></a>
+            </div>
           </div>
         </div>
       </div>
       <ul class="body-con-show-on">
-        <li style="display: flex;">
+        <li style="display: flex">
           <a href="/">
-            <svg width="9" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 2L3 11.5L12 21" stroke="#213ED4" stroke-width="3.5"/>
+            <svg
+              width="9"
+              viewBox="0 0 14 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2L3 11.5L12 21"
+                stroke="#213ED4"
+                stroke-width="3.5"
+              />
             </svg>
           </a>
         </li>
-        <li><NuxtLink to="/about" activeClass="active-link">About</NuxtLink></li>
-        <li><nuxt-link to="/link-exchange" activeClass="active-link">Link exchange</nuxt-link></li>
+        <li>
+          <NuxtLink to="/about" activeClass="active-link">About</NuxtLink>
+        </li>
+        <li>
+          <nuxt-link to="/link-exchange" activeClass="active-link"
+            >Link exchange</nuxt-link
+          >
+        </li>
       </ul>
       <div class="column is-two-thirds body-content-layout">
         <main class="body-con-main">
@@ -78,8 +136,23 @@ const isHomePage = () => {
 </template>
 
 <style>
+.body-con-support {
+  display: flex;
+  align-items: center;
+}
+.body-con-support a img {
+  margin-right: 3px;
+  margin-top: 16px;
+  width: 25px;
+}
+.body-con-cal_nav__layout {
+  margin-top: 30px;
+}
+.about-slug__layout {
+  width: min-content;
+}
 .active-link {
-  color: #1345FF !important;
+  color: #1345ff !important;
   font-weight: bold;
 }
 span.katex-html {
@@ -146,10 +219,9 @@ a {
     width: 90%;
     margin: 0 auto;
   }
-
 }
 .body-about-click {
-  color: #9C9C9C;
+  color: #9c9c9c;
   font-size: 15px;
   margin-bottom: 12px;
 }
@@ -170,7 +242,7 @@ a {
     width: auto;
     padding: 10px;
     font-weight: bold;
-    color: #213ED4;
+    color: #213ed4;
     z-index: 999999999;
     transform: translate(0, -50%);
     box-shadow: 0px 3px 19px 0px rgb(212 212 212);
@@ -179,44 +251,54 @@ a {
     margin-left: 12px;
   }
 }
-.body-con-nav img {
-}
 .body-content-fixed {
   display: flex;
-  position: fixed;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  justify-content: center;
+  height: 100vh;
   padding-top: 20px;
   padding-bottom: 20px;
+  top: 1px;
+  padding: 1vw;
+  position: fixed;
+  z-index: 1;
+  /* padding: 30px; */
+  margin-left: -8vw;
+  /* box-shadow: 0px 0px 14px 30px rgba(178, 178, 178, 0.25); */
+  box-shadow: 46px 0 30px rgb(70 93 255 / 3%);
 }
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  text-transform: uppercase;
-  color: #9C9C9C;
+  display: flex;
+  text-transform: capitalize;
+  color: #9c9c9c;
+  font-size: small;
+}
+ul li {
+  margin-right: 5px;
 }
 ul li a {
-  color: #9C9C9C;
+  color: #9c9c9c;
 }
 ul li a:hover {
-  transition:  0.1s ease;
-  color: #213ED4;
+  transition: 0.1s ease;
+  color: #213ed4;
   font-weight: bold;
 }
 ::selection {
-  background:#213ED4;
+  background: #213ed4;
   color: #fff;
 }
 
 ::-moz-selection {
-  background:#213ED4;
+  background: #213ed4;
   color: #fff;
 }
 
 ::-webkit-selection {
-  background:#213ED4;
+  background: #213ed4;
   color: #fff;
 }
 </style>
