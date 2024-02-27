@@ -141,7 +141,7 @@ const fetchQuote = async () => {
   align-items: center;
 }
 .body-con-support a img {
-  margin-right: 3px;
+  margin-right: 7px;
   margin-top: 16px;
   width: 25px;
 }
