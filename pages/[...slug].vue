@@ -267,7 +267,7 @@ a {
   /* box-shadow: 0px 0px 14px 30px rgba(178, 178, 178, 0.25); */
   box-shadow: 46px 0 30px rgb(70 93 255 / 3%);
 }
-ul {
+.body-con-cal_nav {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -276,10 +276,10 @@ ul {
   color: #9c9c9c;
   font-size: small;
 }
-ul li {
+.body-con-cal_nav li {
   margin-right: 5px;
 }
-ul li a {
+.body-con-cal_nav li a {
   color: #9c9c9c;
 }
 ul li a:hover {
