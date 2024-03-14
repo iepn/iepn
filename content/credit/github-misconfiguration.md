@@ -10,6 +10,8 @@
 "images": "/images/credit/github.png"
 ---
 
-# CWE-16 Github API
-
-:page-img
+::page-img
+---
+title: CWE-16 Github API
+---
+::

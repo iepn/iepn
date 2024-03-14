@@ -10,6 +10,8 @@
 "images": "/images/credit/china-telecom.png"
 ---
 
-# CNVD-2020-10601
-
-:page-img
+::page-img
+---
+title: CNVD-2020-10601
+---
+::

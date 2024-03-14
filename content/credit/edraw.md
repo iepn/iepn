@@ -10,6 +10,8 @@
 "images": "/images/credit/edraw.png"
 ---
 
-# CNVD-2021-24498h
-
-:page-img
+::page-img
+---
+title: CNVD-2021-24498h
+---
+::

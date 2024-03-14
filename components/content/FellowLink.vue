@@ -1,46 +1,94 @@
 <script setup>
 import { defineProps } from "vue";
+import axios from "axios";
 
 const props = defineProps({
   img: {
     type: String,
-    default: "",
+    default: "https://avatars.githubusercontent.com/u/57232813?v=4",
   },
   back: {
     type: String,
+    default: "/fellow/back/iepn.png",
   },
   url: {
     type: String,
-    default: "https://www.behance.net/rhymeq",
+    default: "https://otvto.work/",
   },
   title: {
     type: String,
-    default: "N/A",
+    default: "Iepn",
   },
   desc: {
     type: String,
-    default: "N/A",
+    default: "I'M UNDERACHIEVER \ LOSER \ FAILURE \ DUD \ WASHOUT",
   },
 });
+
+const whiteList = ["https://feizhaojun.com/", "https://uzzju.com/"];
+
+async function checkUrlAccessibility(url) {
+  if (whiteList.includes(url)) {
+    return true;
+  }
+  try {
+    const response = await axios.head(url, {
+      validateStatus: (status) => status < 400,
+    });
+    return response.status < 400;
+  } catch (error) {
+    console.error("Failed to fetch resource:", error);
+    return false;
+  }
+}
+
+// 检查所有资源并设置结果
+const resourcesAccessible = ref(true);
+
+async function verifyResources() {
+  resourcesAccessible.value = (
+    await Promise.all([
+      checkUrlAccessibility(props.img),
+      checkUrlAccessibility(props.back),
+      checkUrlAccessibility(props.url),
+    ])
+  ).every(Boolean);
+
+  return resourcesAccessible.value;
+}
+
+onMounted(verifyResources);
 </script>
 
 <template>
-  <NuxtLink :to="url" target="_blank">
-    <main class="layout">
-      <div class="background" :style="`background-image: url(${back})`">
-        <main class="back-layout">
-          <img :src="img" />
-          <div class="desc">
-            <p id="title">{{ title }}</p>
-            <p>{{ desc }}</p>
-          </div>
-        </main>
-      </div>
-    </main>
-  </NuxtLink>
+  <transition name="fade">
+    <NuxtLink v-if="resourcesAccessible" :to="url" target="_blank">
+      <main class="layout">
+        <div class="background" :style="`background-image: url(${back})`">
+          <main class="back-layout">
+            <img :src="img" />
+            <div class="desc">
+              <p id="title">{{ title }}</p>
+              <p>{{ desc }}</p>
+            </div>
+          </main>
+        </div>
+      </main>
+    </NuxtLink>
+    <div v-else style="display: none"></div>
+  </transition>
 </template>
 
 <style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 .desc {
   line-height: 1;
   display: block;
@@ -61,7 +109,7 @@ const props = defineProps({
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 .layout:hover {
-    transform: scale(0.98);
+  transform: scale(0.98);
 }
 .back-layout {
   z-index: 3;
