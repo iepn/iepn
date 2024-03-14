@@ -4,8 +4,15 @@
         <description><![CDATA[RHYME.Q 韵清]]></description>
         <link>https://iepn.pages.dev</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 02 Mar 2024 19:43:02 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 14 Mar 2024 22:19:17 GMT</lastBuildDate>
         <atom:link href="https://iepn.pages.dev/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[ICRF HCI]]></title>
+            <description><![CDATA[集成网络弹性人机交互（ICRH）是江雪銮音实验室针对安全防御和极端环境设计的分布式防御系统。它集成了多方弹性网络和由三层到四层网络映射衍生的防御架构，以应对各种环境威胁。]]></description>
+            <link>iepn.pages.dev/work/icrf-hci</link>
+            <guid isPermaLink="true">iepn.pages.dev/work/icrf-hci</guid>
+            <pubDate>Wed, 13 Mar 2024 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[江雪联合实验室銮音项目]]></title>
             <description><![CDATA[江雪之前已经成立和组建了一个虹霓实验室，但由于虹霓主要专注于天演计算、分析等方面的项目和边缘领域，因此将一些辅助性的项目划分给了銮音。銮音的名字取自《说文》中的:人君乘车四马四镳八銮，铃象鸾，鸟声，和则敬也。]]></description>
