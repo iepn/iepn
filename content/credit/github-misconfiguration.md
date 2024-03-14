@@ -12,4 +12,4 @@
 
 # CWE-16 Github API
 
-:page-back
+:page-img

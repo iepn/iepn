@@ -199,7 +199,7 @@ const getAllData = computed(() => {
   margin-top: 15px;
   margin-bottom: 15px;
   height: 753px;
-  background-position: left bottom !important;
+  background-position: center bottom !important;
   background-size: cover !important;
   transition: transform 0.3s ease;
 }

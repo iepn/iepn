@@ -7,17 +7,12 @@
 "demo": "#in development"
 "images": "/images/pages/myung/1.png"
 ---
-# Myung
-
-:page-back
 
 ::page-img
-<div class="slider">
-  <div class="slides">
-      <img src="/images/pages/myung/1.png">
-      <img src="/images/pages/myung/2.png">
-  </div>
-</div>
+---
+title: Myung
+img: myung/1,myung/2
+---
 ::
 
 我为此设计了一个看起来非常典雅的 Logo，尤其是那个红色印章显得富有文化底蕴。最初，我想将它命名为 "明"，寓意点亮未来的道路。后来，我又想为它赋予一个充满潜力的理念。
@@ -90,8 +85,10 @@ https://linux.cn/article-16602-1.html
 
 同时，我还注意到他们的微信公众号是以公司名义注册的，这显然是一个商业性质的公司。如果是商业性质的开源项目，贪图利润而投入那是理所当然的。
 
-::page-info
-*并没有攻击 Linux.cn 是逐利的意思，而是说公司就是公司，公司的目的就是赚钱的。衡量一个公司的好坏就是提供了多少的就业岗位，每年的利润有多少、交了多少税。其次才是社会贡献等方面综合因素衡量，如果格局大一点还可以引入 ESG（环境、社会与治理,Environmental, social, and corporate governance）作为参考标准。
+::text-space
+---
+info: "*并没有攻击 Linux.cn 是逐利的意思，而是说公司就是公司，公司的目的就是赚钱的。衡量一个公司的好坏就是提供了多少的就业岗位，每年的利润有多少、交了多少税。其次才是社会贡献等方面综合因素衡量，如果格局大一点还可以引入 ESG（环境、社会与治理,Environmental, social, and corporate governance）作为参考标准。"
+---
 ::
 
 但如果是新闻资讯和媒体方面的开源社区，又不愿意进行推广、炒作和私域等活动，也没有核心的技术和用户所需的需求，那自然会变得困难。

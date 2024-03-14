@@ -12,4 +12,4 @@
 
 # CNVD-2020-10601
 
-:page-back
+:page-img

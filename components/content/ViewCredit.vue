@@ -73,8 +73,7 @@ const isCurrentPage = (path: string) => {
   <main>
     <div class="view-sec_layout">
       <div>
-        <h1>Security</h1>
-        <PageBack />
+        <PageImg title="Security" />
       </div>
       <div class="view-sec_button">
         <NuxtLink
@@ -170,6 +169,7 @@ const isCurrentPage = (path: string) => {
 /* security */
 .view-sec_layout {
   display: flex;
+  align-items: center;
 }
 
 .view-sec_button {

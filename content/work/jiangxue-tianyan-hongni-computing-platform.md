@@ -7,17 +7,12 @@
 "demo": "https://gateway.hongni-lab.jiangxue.org/"
 "images": "/images/pages/tianyan-compute/1.png"
 ---
-# 江雪虹霓实验室计算平台
-
-:page-back
 
 ::page-img
-<div class="slider">
-  <div class="slides">
-      <img src="/images/pages/tianyan-compute/1.png">
-      <img src="/images/pages/tianyan-compute/2.png">
-  </div>
-</div>
+---
+title: 江雪虹霓实验室计算平台
+img: tianyan-compute/1,tianyan-compute/2
+---
 ::
 
 在负责过江雪天演舆情项目后，我们发现辅助和周边服务存在较大的不足。因此，在天演舆情中，除了数据、存储、分析和研判等方面的对比外，几乎无法与在资金、人际关系和先发优势等方面具备优势的前辈个体有所差异。

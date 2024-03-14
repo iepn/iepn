@@ -1,17 +1,21 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-
-const currentMonthImage = ref<string>("");
-
-onMounted(() => {
-  fetchQuote();
-});
+import { ref, onMounted, reactive } from "vue";
+import apis from "~/utils/apis";
 
 const currentUrl = ref<string>("");
 
+const today = reactive({
+  quote: "",
+  book: "",
+  detail: "",
+  author: "",
+});
+
 onMounted(() => {
+  fetchQuote();
   currentUrl.value = window.location.href;
 });
+
 
 const isCurrentPage = (paths: string[]) => {
   return paths.some((path) => currentUrl.value.includes(path));
@@ -20,19 +24,27 @@ const isHomePage = () => {
   return currentUrl.value.endsWith("/");
 };
 
-const quote = ref("");
-const author = ref("");
+const formattedText = computed(() => {
+  if (today.quote && today.book && today.author) {
+    return `<small title="${today.detail}" style="opacity: 0.65">${today.quote} —— 《${today.book}》${today.author}</small>`;
+  }
+  return '';
+});
 
-const fetchQuote = async () => {
+async function fetchQuote() {
   try {
-    const response = await fetch("https://api.quotable.io/random");
-    const data = await response.json();
-    quote.value = data.content;
-    author.value = data.author;
+    const response = await apis.jinRiShiCiApi.get("/one.json");
+    if (response.data && response.data.data) {
+      const data = response.data.data;
+      today.quote = data.content;
+      today.book = data.origin.title;
+      today.author = data.origin.author;
+      today.detail = data.origin.translate;
+    }
   } catch (error) {
     console.error(error);
   }
-};
+}
 </script>
 
 <template>
@@ -55,7 +67,7 @@ const fetchQuote = async () => {
               <p class="typewriter slug-home_layout">
                 Full-stack development, Security, and Design.
               </p>
-              <small style="opacity: 0.65">{{ quote }} - {{ author }}</small>
+              <main v-html="formattedText"/>
             </div>
           </div>
           <!-- INFO END -->
@@ -136,6 +148,9 @@ const fetchQuote = async () => {
 </template>
 
 <style>
+pre {
+    color: #989898;
+}
 .body-con-support {
   display: flex;
   align-items: center;
@@ -146,7 +161,7 @@ const fetchQuote = async () => {
   width: 25px;
 }
 .body-con-cal_nav__layout {
-  margin-top: 30px;
+  margin-top: 18px;
 }
 .about-slug__layout {
   width: min-content;
@@ -170,9 +185,9 @@ span.katex-html {
 #article h1 {
   font-size: 22px;
   font-weight: bold;
-  margin-bottom: 22px;
   color: #000;
-  margin-left: 26px;
+  margin-left: 10px;
+  line-height: 0;
 }
 #article iframe {
   width: 100% !important;

@@ -7,18 +7,12 @@
 "demo": "#IN DEVELOPMENT"
 "images": "/images/pages/to-web3/1.png"
 ---
-# To Web3 navigate
-
-:page-back
 
 ::page-img
-<div class="slider">
-  <div class="slides">
-      <img src="/images/pages/to-web3/1.png">
-      <img src="/images/pages/to-web3/2.png">
-      <img src="/images/pages/to-web3/3.png">
-  </div>
-</div>
+---
+title: To Web3 navigate
+img: to-web3/1,to-web3/2,to-web3/3
+---
 ::
 
 帮朋友设计的一个项目，采用了大量二刺螈设计元素和呈现方式，主打一个 ACG。然而，时隔一年发现该项目仍然停滞不前，甚至域名都尚未购买。

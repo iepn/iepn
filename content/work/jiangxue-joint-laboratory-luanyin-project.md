@@ -7,18 +7,12 @@
 "demo": "https://gateway.luanyin.jiangxue.org/"
 "images": "/images/pages/tianyan/tianyan-home.png"
 ---
-# 江雪联合实验室銮音项目
-
-:page-back
 
 ::page-img
-<div class="slider">
-  <div class="slides">
-      <img src="/images/pages/tianyan/ty-0.png">
-      <img src="/images/pages/tianyan/ty-1.png">
-      <img src="/images/pages/tianyan/ty-2.png">
-  </div>
-</div>
+---
+title: 江雪联合实验室銮音项目
+img: tianyan/ty-0,tianyan/ty-1,tianyan/ty-2
+---
 ::
 
 江雪之前已经成立和组建了一个虹霓实验室，但由于虹霓主要专注于天演计算、分析等方面的项目和边缘领域，因此将一些辅助性的项目划分给了銮音。銮音的名字取自《说文》中的 "人君乘车四马四镳八銮，铃象鸾，鸟声，和则敬也。"。

@@ -7,19 +7,12 @@
 "demo": "https://gateway.tianyan.jiangxue.org/"
 "images": "/images/pages/tianyan-opinion/1.png"
 ---
-# 江雪天演舆情分析项目
-
-:page-back
 
 ::page-img
-<div class="slider">
-  <div class="slides">
-      <img src="/images/pages/tianyan-opinion/1.png">
-      <img src="/images/pages/tianyan-opinion/4.png">
-      <img src="/images/pages/tianyan-opinion/2.png">
-      <img src="/images/pages/tianyan-opinion/3.png">
-  </div>
-</div>
+---
+title: 江雪天演舆情分析项目
+img: tianyan-opinion/1,tianyan-opinion/4,tianyan-opinion/2,tianyan-opinion/3
+---
 ::
 
 在谈及 "舆情" 之前，我相信很多人会在听到这种类似的分析项目时脸色一变，觉得这只是普通的数据抓取和分析，甚至认为是直接看社交平台（包括短视频平台）的数据反馈。

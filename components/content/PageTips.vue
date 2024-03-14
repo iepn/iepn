@@ -18,28 +18,11 @@
       <p>Designed, Developed, and Written by Rhyme.Q ❄️<br>Copyright © 2013 - 2024 RHYME Q. All Rights Reserved. 韵清 版权所有</p>
       <p id="dep"><a href="https://github.com/iepn/iepn/commits/main/">DEPLOY workflows: {{ firstSha }}</a></p>
     </div>
-    <div class="google-tran">
-      <GoogleTranslateSelect
-          default-language-code="en"
-          default-page-language-code="zh"
-          :fetch-browser-language="false"
-          trigger="click"
-          @select="handleGoogleTranslateSelect"
-      />
-    </div>
   </div>
 </template>
 
 
 <style scoped>
-.google-tran :nth-child(1) {
-  background-image: none !important;
-  width: auto !important;
-  padding: 0;
-  margin: 0;
-  color: #8e8e8e;
-}
-
 #dep {
   text-transform: uppercase;
 }
@@ -76,30 +59,25 @@
 </style>
 
 <script setup lang="ts">
-import GoogleTranslateSelect from '@google-translate-select/vue3';
-
-const handleGoogleTranslateSelect = (language: any) => {
-}
 import { ref, onMounted } from 'vue';
-
 const commitsData = ref([]);
 const firstSha = ref('');
+import apis from '~/utils/apis';
 
 onMounted(async () => {
   try {
-    const response = await fetch('https://api.github.com/repos/iepn/iepn/commits');
-    if (response.ok) {
-      commitsData.value = await response.json();
+    const response = await apis.githubApi.get('/repos/iepn/iepn/commits');
+    if (response.status === 200) {
+      commitsData.value = response.data;
 
-      // sha
+      // 获取第一个 commit 的 sha 前七位
       firstSha.value = commitsData.value[0]?.sha?.substring(0, 7);
     } else {
-      console.error('API request failed');
+      console.error('GitHub API request failed');
     }
   } catch (error) {
-    console.error('Error data:', error);
+    console.error('Error fetching GitHub data:', error);
   }
 });
-const tips = ref(false)
 
 </script>

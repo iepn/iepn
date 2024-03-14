@@ -12,4 +12,4 @@
 
 # CNVD-2021-24498h
 
-:page-back
+:page-img
