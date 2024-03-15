@@ -1,6 +1,7 @@
 <script setup>
 import { defineProps } from "vue";
 import axios from "axios";
+const colorMode = useColorMode();
 
 const props = defineProps({
   img: {
@@ -108,6 +109,10 @@ onMounted(verifyResources);
   margin-bottom: 4vh;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
+.dark-mode .layout {
+    mix-blend-mode: exclusion !important;
+    opacity: 0.7;
+}
 .layout:hover {
   transform: scale(0.98);
 }
@@ -128,5 +133,8 @@ img {
   height: 100%;
   background-size: cover;
   box-shadow: 0px 11px 14px 0px rgb(0 0 0 / 4%);
+}
+.dark-mode .background {
+  box-shadow: 0px 11px 14px 0px rgba(255, 255, 255 / 4%);
 }
 </style>
