@@ -1,1 +1,0 @@
-import{f as o,o as n,c as t,a,x as c}from"./entry.dyol__NL.js";import{_ as s}from"./_plugin-vue_export-helper.x3n3nnut.js";const r={key:0,id:"info"},i=["innerHTML"],_=o({__name:"TextSpace",props:["info"],setup(e){return(f,m)=>e.info?(n(),t("main",r,[a("main",{innerHTML:e.info},null,8,i)])):c("",!0)}}),l=s(_,[["__scopeId","data-v-41f7b49a"]]);export{l as default};

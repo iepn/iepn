@@ -2,57 +2,57 @@
     <channel>
         <title><![CDATA[RHYME.Q 韵清]]></title>
         <description><![CDATA[RHYME.Q 韵清]]></description>
-        <link>https://iepn.pages.dev</link>
+        <link>https://otvto.work</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 15 Mar 2024 15:15:08 GMT</lastBuildDate>
-        <atom:link href="https://iepn.pages.dev/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Sun, 17 Mar 2024 21:50:21 GMT</lastBuildDate>
+        <atom:link href="https://otvto.work/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[ICRF HCI]]></title>
             <description><![CDATA[集成网络弹性人机交互（ICRH）是江雪銮音实验室针对安全防御和极端环境设计的分布式防御系统。它集成了多方弹性网络和由三层到四层网络映射衍生的防御架构，以应对各种环境威胁。]]></description>
-            <link>iepn.pages.dev/work/icrf-hci</link>
-            <guid isPermaLink="true">iepn.pages.dev/work/icrf-hci</guid>
+            <link>otvto.work/work/icrf-hci</link>
+            <guid isPermaLink="true">otvto.work/work/icrf-hci</guid>
             <pubDate>Wed, 13 Mar 2024 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[江雪联合实验室銮音项目]]></title>
             <description><![CDATA[江雪之前已经成立和组建了一个虹霓实验室，但由于虹霓主要专注于天演计算、分析等方面的项目和边缘领域，因此将一些辅助性的项目划分给了銮音。銮音的名字取自《说文》中的:人君乘车四马四镳八銮，铃象鸾，鸟声，和则敬也。]]></description>
-            <link>iepn.pages.dev/work/jiangxue-joint-laboratory-luanyin-project</link>
-            <guid isPermaLink="true">iepn.pages.dev/work/jiangxue-joint-laboratory-luanyin-project</guid>
+            <link>otvto.work/work/jiangxue-joint-laboratory-luanyin-project</link>
+            <guid isPermaLink="true">otvto.work/work/jiangxue-joint-laboratory-luanyin-project</guid>
             <pubDate>Mon, 25 Dec 2023 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Myung]]></title>
             <description><![CDATA[我为此设计了一个看起来非常典雅的 Logo，尤其是那个红色印章显得富有文化底蕴。最初，我想将它命名为明，寓意点亮未来的道路。后来，我又想为它赋予一个充满潜力的理念。]]></description>
-            <link>iepn.pages.dev/work/jiangxue-myung-api-security-project</link>
-            <guid isPermaLink="true">iepn.pages.dev/work/jiangxue-myung-api-security-project</guid>
+            <link>otvto.work/work/jiangxue-myung-api-security-project</link>
+            <guid isPermaLink="true">otvto.work/work/jiangxue-myung-api-security-project</guid>
             <pubDate>Wed, 31 Jan 2024 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[江雪虹霓实验室计算平台]]></title>
             <description><![CDATA[在负责过江雪天演舆情项目后，我们发现辅助和周边服务存在较大的不足。因此，在天演舆情中，除了数据、存储、分析和研判等方面的对比外，几乎无法与在资金、人际关系和先发优势等方面具备优势的前辈个体有所差异。]]></description>
-            <link>iepn.pages.dev/work/jiangxue-tianyan-hongni-computing-platform</link>
-            <guid isPermaLink="true">iepn.pages.dev/work/jiangxue-tianyan-hongni-computing-platform</guid>
+            <link>otvto.work/work/jiangxue-tianyan-hongni-computing-platform</link>
+            <guid isPermaLink="true">otvto.work/work/jiangxue-tianyan-hongni-computing-platform</guid>
             <pubDate>Tue, 12 Dec 2023 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[江雪天演舆情分析项目]]></title>
             <description><![CDATA[在谈及 舆情 之前、我相信有很多人会脸色一变觉得这种类似的分析项目就是普通的数据抓取和分析，甚至是直接看社交平台（含短视频平台）的数据进行反馈。]]></description>
-            <link>iepn.pages.dev/work/jiangxue-tianyan-internet-public-opinion-platform</link>
-            <guid isPermaLink="true">iepn.pages.dev/work/jiangxue-tianyan-internet-public-opinion-platform</guid>
+            <link>otvto.work/work/jiangxue-tianyan-internet-public-opinion-platform</link>
+            <guid isPermaLink="true">otvto.work/work/jiangxue-tianyan-internet-public-opinion-platform</guid>
             <pubDate>Sat, 05 Aug 2023 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[琼楼组件库设计]]></title>
             <description><![CDATA[说实话我与前端的接触并不多，如果说最多的无非是小学时对拥有一台服务器、域名和论坛的盲目追崇。当时的 Xiuno BBS 还火极一时（因为安装很方便，就是那种无脑下一步即可的），之后接触到了 WordPress、 Discuz x!、z-blog、MediaWiki 但都没有我喜欢的。]]></description>
-            <link>iepn.pages.dev/work/qionglou-component-library</link>
-            <guid isPermaLink="true">iepn.pages.dev/work/qionglou-component-library</guid>
+            <link>otvto.work/work/qionglou-component-library</link>
+            <guid isPermaLink="true">otvto.work/work/qionglou-component-library</guid>
             <pubDate>Sat, 22 Apr 2023 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[To Web3]]></title>
             <description><![CDATA[帮朋友设计的一个项目，采用了大量二次元设计元素和呈现方式，主打ACG。然而，时隔一年发现该项目仍然停滞不前，甚至域名都尚未购买。]]></description>
-            <link>iepn.pages.dev/work/to-web3-navigation</link>
-            <guid isPermaLink="true">iepn.pages.dev/work/to-web3-navigation</guid>
+            <link>otvto.work/work/to-web3-navigation</link>
+            <guid isPermaLink="true">otvto.work/work/to-web3-navigation</guid>
             <pubDate>Wed, 27 Sep 2023 00:00:00 GMT</pubDate>
         </item>
     </channel>
