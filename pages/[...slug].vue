@@ -96,13 +96,13 @@ async function fetchQuote() {
               </li>
             </ul>
             <div class="body-con-support">
-              <a href="https://github.com/iepn"
+              <a href="https://github.com/3u"
                 ><img src="/images/logo/git.svg"
               /></a>
               <a href="https://hackerone.com/iepn"
                 ><img src="/images/logo/h1.svg"
               /></a>
-              <a href="https://www.behance.net/rhymeq"
+              <a href="https://www.behance.net/1ui"
                 ><img src="/images/logo/be.svg"
               /></a>
               <a href="https://www.researchgate.net/profile/Rhyme-Qing"

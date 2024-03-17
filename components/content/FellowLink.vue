@@ -10,7 +10,7 @@ const props = defineProps({
   },
   back: {
     type: String,
-    default: "/fellow/back/iepn.png",
+    default: "/fellow/back/3ui.png",
   },
   url: {
     type: String,
@@ -18,7 +18,7 @@ const props = defineProps({
   },
   title: {
     type: String,
-    default: "Iepn",
+    default: "3u",
   },
   desc: {
     type: String,

@@ -8,7 +8,7 @@ const props = defineProps({
   },
   url: {
     type: String,
-    default: "https://www.behance.net/rhymeq",
+    default: "https://www.behance.net/1ui",
   },
   title: {
     type: String,

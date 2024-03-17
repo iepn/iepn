@@ -5,8 +5,8 @@ import RSS from 'rss';
 export default defineEventHandler(async (event) => {
     const feed = new RSS({
         title: 'RHYME.Q 韵清',
-        site_url: 'https://iepn.pages.dev',
-        feed_url: `https://iepn.pages.dev/rss.xml`,
+        site_url: 'https://otvto.work',
+        feed_url: `https://otvto.work/rss.xml`,
     });
 
     const docs = await serverQueryContent(event)
@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
     for (const doc of blogPosts) {
         feed.item({
             title: doc.title ?? '-',
-            url: `iepn.pages.dev${doc._path}`,
+            url: `otvto.work${doc._path}`,
             date: doc.release_date,
             description: doc.description
         });
