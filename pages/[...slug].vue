@@ -96,7 +96,7 @@ async function fetchQuote() {
               </li>
             </ul>
             <div class="body-con-support">
-              <a href="https://github.com/3u"
+              <a href="https://github.com/iepn"
                 ><img src="/images/logo/git.svg"
               /></a>
               <a href="https://hackerone.com/iepn"

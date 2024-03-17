@@ -10,7 +10,7 @@ const props = defineProps({
   },
   back: {
     type: String,
-    default: "/fellow/back/3ui.png",
+    default: "/fellow/back/iepn.png",
   },
   url: {
     type: String,
@@ -18,12 +18,12 @@ const props = defineProps({
   },
   title: {
     type: String,
-    default: "3u",
+    default: "Iepn",
   },
   desc: {
     type: String,
     default: "I'M UNDERACHIEVER \ LOSER \ FAILURE \ DUD \ WASHOUT",
-  },
+  }
 });
 
 const whiteList = ["https://feizhaojun.com/", "https://uzzju.com/"];

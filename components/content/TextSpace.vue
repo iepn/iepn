@@ -1,28 +1,27 @@
 <script setup lang="ts">
-const { info, img } = defineProps<{ info: string; img: string | undefined }>();
+defineProps(["info", "img"]);
 </script>
 
 <template>
-  <main class="page-tips-main">
+  <main v-if="info" id="page-tips-main">
     <img v-if="img" :src="'/images/info/' + img + '.png'" />
-    <p id="info">{{ info }}</p>
+    <main v-html="info" />
   </main>
 </template>
 
 <style scoped>
-#info {
+#page-tips-main {
   font-size: small;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 main {
   color: #8e8e8e;
   text-align: justify;
-  margin-top: 12px;
-  margin-bottom: 12px;
+  margin-top: 1px;
+  margin-bottom: 1px;
 }
 
-/* img+desc */
 #page-tips-main img {
   width: 100% !important;
   margin-bottom: 5px;
@@ -38,8 +37,6 @@ main {
 #page-tips-main {
   color: #b6b6b6;
   font-size: small;
-  margin-top: 19px;
-  margin-bottom: 19px;
   display: flex;
   flex-direction: column;
 }

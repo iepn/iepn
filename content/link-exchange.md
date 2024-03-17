@@ -10,7 +10,7 @@ title: 朋友们
 
 ::fellow-link
 ---
-title: 3u
+title: Iepn
 desc: I'M UNDERACHIEVER \ LOSER \ FAILURE \ DUD \ WASHOUT
 img: https://avatars.githubusercontent.com/u/57232813?v=4
 back: /fellow/back/1ui.png
@@ -103,7 +103,7 @@ info: "*上述中的排名不分先后。如果您想与我互换友情链接，
 
  如果您想在您的 BLOG 中添加我，那么您可以选择通过添加 <b>https://member.acm.org/~rhymeq</b> 的方式跳转到我的 Blog 中。这样做的好处是我不会在一系列的 Analytics Tools 中看到您的转化率，也就是我们是无目的的交个朋友。<br><br>
  
- 或者您直接<a href='https://github.com/3u/3u/blob/main/content/link-exchange.md' style='color: #6a6a6a;font-weight: bold;'>点此提交一个 PR</a>，我如果看到就会将您的友情链接合并。<br><br>
+ 或者您直接<a href='https://github.com/iepn/iepn/blob/main/content/link-exchange.md' style='color: #6a6a6a;font-weight: bold;'>点此提交一个 PR</a>，我如果看到就会将您的友情链接合并。<br><br>
 
  <b>注意：如果您的 Blog 对某些意外请求做出限制，那么可能会导致被误判为链接已失效从而隐藏。因此您可以在 components/content/FellowLink.vue 中的 whiteList 白名单列表中，加入您的 URL。</b><br><br>
 
