@@ -4,8 +4,32 @@
         <description><![CDATA[RHYME.Q 韵清]]></description>
         <link>https://otvto.work</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 17 Mar 2024 21:50:21 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 18 Mar 2024 03:18:51 GMT</lastBuildDate>
         <atom:link href="https://otvto.work/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[Credit]]></title>
+            <link>otvto.work/credit</link>
+            <guid isPermaLink="true">otvto.work/credit</guid>
+        </item>
+        <item>
+            <title><![CDATA[广东电信 IPTV 支付系统存在逻辑缺陷漏洞]]></title>
+            <link>otvto.work/credit/china-telecom</link>
+            <guid isPermaLink="true">otvto.work/credit/china-telecom</guid>
+            <pubDate>Tue, 04 Feb 2020 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[亿图图示水印导出逻辑漏洞]]></title>
+            <link>otvto.work/credit/edraw</link>
+            <guid isPermaLink="true">otvto.work/credit/edraw</guid>
+            <pubDate>Sat, 01 May 2021 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[GraphQL Misconfiguration in CWE-16 Github API]]></title>
+            <description><![CDATA[这是我第一次提交漏洞获得赏金和周边奖励的漏洞，所以我印象深刻。自我放弃安全路线以来，再一次发现较为知名厂商或平台的安全缺陷，可以当做是我的里程碑，但并不是终点。]]></description>
+            <link>otvto.work/credit/github-misconfiguration</link>
+            <guid isPermaLink="true">otvto.work/credit/github-misconfiguration</guid>
+            <pubDate>Mon, 04 Dec 2023 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[ICRF HCI]]></title>
             <description><![CDATA[集成网络弹性人机交互（ICRH）是江雪銮音实验室针对安全防御和极端环境设计的分布式防御系统。它集成了多方弹性网络和由三层到四层网络映射衍生的防御架构，以应对各种环境威胁。]]></description>
