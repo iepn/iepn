@@ -20,6 +20,16 @@ url: https://otvto.work/
 
 ::fellow-link
 ---
+title: Dragove
+desc: BTW, I use arch
+img: https://avatars.githubusercontent.com/u/24190403?v=4
+back: /fellow/back/dragove.png
+url: https://dragove.site/
+---
+::
+
+::fellow-link
+---
 title: Maya
 desc: 是一位专注于使用 Neovim 进行 Dev 的大佬
 img: https://avatars.githubusercontent.com/u/62200137?v=4

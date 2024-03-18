@@ -1,5 +1,6 @@
 <script setup lang="ts">
 defineProps(["info", "img"]);
+const colorMode = useColorMode();
 </script>
 
 <template>
@@ -10,6 +11,10 @@ defineProps(["info", "img"]);
 </template>
 
 <style scoped>
+.dark-mode img {
+    mix-blend-mode: exclusion !important;
+    opacity: 0.7 !important;
+}
 #page-tips-main {
   font-size: small;
   margin-top: 1px;

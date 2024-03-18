@@ -21,10 +21,11 @@ img: tianyan-compute/1,tianyan-compute/2
 
 更令人振奋的是，这些方面与江雪天演项目的性质高度契合。通过与周边应用的对接，可以使天演项目在原本已经很优秀的基础上更具特色，并提升相关领域的门槛。
 
-::img-tips
-<img src="/images/info/2/1.png" >
-图源 1 | 江雪天演舆情分析项目：当时在乙方场地直接拍的，看到的第一感觉是落地效果很棒，集成的数据协调和统筹系统显示起来很有电影里的感觉。
-https://gateway.tianyan.jiangxue.org/
+::text-space
+---
+img: 2/1
+info: 图源 1 | 江雪天演舆情分析项目：当时在乙方场地直接拍的，看到的第一感觉是落地效果很棒，集成的数据协调和统筹系统显示起来很有电影里的感觉。<br/>https://gateway.tianyan.jiangxue.org/
+---
 ::
 
 有趣的是，在我将 "江雪虹霓实验室计算平台" 发布到 Behance 不久后，我收到了一个关于 [Vantage](https://www.vantagemarkets.com/en/) 3D 设计师助理职位的邀请。

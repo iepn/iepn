@@ -47,28 +47,31 @@ img: myung/1,myung/2
 
 因此，除非未来有新的 RFC 和传输协议的支持，并经过数年的推动和标准化，否则无法实现绝对的安全操作，更多的是增加攻击成本。
 
-::img-tips
-<img src="/images/info/5/3.png" >
-图源 1 | 就像 MLS 一样在 CCC 那样 2023 年 7 月提出的提案被 Discord、Matrix、Wire 所应用（Matrix真的很安全）。
-https://events.ccc.de/congress/2023/hub/en/event/rfc_9420_or_how_to_scale_end-to-end_encryption_with_messaging_layer_security/
+::text-space
+---
+img: 5/3
+info: 图源 1 | 就像 MLS 一样在 CCC 那样 2023 年 7 月提出的提案被 Discord、Matrix、Wire 所应用（Matrix真的很安全）。<br />https://events.ccc.de/congress/2023/hub/en/event/rfc_9420_or_how_to_scale_end-to-end_encryption_with_messaging_layer_security/
+---
 ::
 
 或者。目前有一个更加理想的状态去完成 POST 的操作，即用户密钥（Face ID 或 Touch ID）这种方式通常仅在较为严重的用户决策时进行验证（大多是 API 调用次数要钱，因此很节约）
 
 如果未来琼楼搭配 Myung 共同完成这个 IDEA。我想、这可能是目前前端组件库中，为数不多考虑安全性的开源项目。
 
-::img-tips
-<img src="/images/info/5/1.jpg" >
-图源 2 | CVE-2023-22527:RCE (Remote Code Execution) Vulnerability
-https://t.me/Oracleimpact/901 | Thank: Nian
+::text-space
+---
+img: 5/1
+info: 图源 2 | CVE-2023-22527:RCE (Remote Code Execution) Vulnerability<br />https://t.me/Oracleimpact/901 | Thank:Nian
+---
 ::
 
 恰好在我完成这篇文章时，Linux.cn 停止了运营。说实话，作为资讯类的开源社区文章和内容作为新闻聚合非常好，如果贡献翻译和推广 Linux 技术和生态是其使命，那 Linux.cn 显然已经完成了。
 
-::img-tips
-<img src="/images/info/5/2.png" >
-图源 3 | “Linux 中国” 开源社区，停止运营
-https://linux.cn/article-16602-1.html
+::text-space
+---
+img: 5/2
+info: 图源 3 | “Linux 中国” 开源社区，停止运营<br />https://linux.cn/article-16602-1.html
+---
 ::
 
 而 Linux 在印度的完全本地化和商业推广，离不开国际形势和其他方面的文化和影响。在网站运营者在其封面文章中所阐述的：“这带来了巨大的资金压力，尤其是在托管服务器价格高昂的那段时期。” 

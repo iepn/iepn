@@ -1,5 +1,6 @@
 <script setup>
 import { defineProps } from "vue";
+const colorMode = useColorMode();
 
 const props = defineProps({
   img: {
@@ -142,7 +143,10 @@ const props = defineProps({
   text-align: center;
   overflow: hidden;
 }
-
+.dark-mode .slider {
+    mix-blend-mode: exclusion !important;
+    opacity: 0.7 !important;
+}
 .slides img {
   max-width: fit-content;
   height: 753px;

@@ -29,26 +29,30 @@ img: tianyan/ty-0,tianyan/ty-1,tianyan/ty-2
 
 最近，剑桥的研究团队和合作者巧妙地利用了上述方式，即虚拟实验室，在这篇论文中被称为 SDLs（Distributed Self-Driving Laboratories，分布式自动驾驶实验室 / 分布式自主实验室）刊登在 [Nature Journal](https://www.nature.com/articles/s41467-023-44599-9)。
 
-::img-tips
-<img src="/images/info/1/1.png" >
-图源 1 | From Platform to Knowledge Graph: Distributed Self-Driving Laboratories
-https://como.ceb.cam.ac.uk/media/preprints/c4e-preprint-310.pdf
+
+::text-space
+---
+img: 1/1
+info: 图源 1 | From Platform to Knowledge Graph:Distributed Self-Driving Laboratories <br/> https://como.ceb.cam.ac.uk/media/preprints/c4e-preprint-310.pdf
+---
 ::
 
 这和天演虹霓实验室的做法类似，通过大量的计算资源将物理实验室设备进行虚拟仿真，已达到云上开展研究和设计，同时实时共享数据可让其合作者实时观察进度和操作。
 
-::img-tips
-<img src="/images/info/1/2.png" >
-图源 2 | 江雪虹霓实验室：为江雪和其附属团队和项目及其合作者提供计算资源和实验环境的计算平台
-https://gateway.hongni-lab.jiangxue.org/
+::text-space
+---
+img: 1/2
+info: 图源 2 | 江雪虹霓实验室：为江雪和其附属团队和项目及其合作者提供计算资源和实验环境的计算平台 https://gateway.hongni-lab.jiangxue.org/
+---
 ::
 
 当然江雪的某些研究领域不像是生物、化学、物理那样需要什么样的器材和设备，江雪的主要项目更侧重计算机网络、科学等方面，因此我们只是将计算资源以及网络、环境仿真和模拟等。
 
-::img-tips
-<img src="/images/info/1/3.png" >
-图源 3 | 根据科学家的目标请求触发自主工作流，作为在知识图谱中传播信息。
-https://como.ceb.cam.ac.uk/media/preprints/c4e-preprint-310.pdf
+::text-space
+---
+img: 1/3
+info: 图源 3 | 根据科学家的目标请求触发自主工作流，作为在知识图谱中传播信息。https://como.ceb.cam.ac.uk/media/preprints/c4e-preprint-310.pdf
+---
 ::
 
 像是图 3 这种直接在关系图里直接通过描述词然后让 ROG Agent 直接执行和调用的，还是很新颖的。江雪目前更多的是通过 Code 模块化的预设命令完成这种操作。感觉很像 [obsidian](https://obsidian.md/) 的知识图谱，通过这种方式呈现的效果感觉比看状态、日志的效果更加直观。

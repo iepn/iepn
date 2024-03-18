@@ -37,9 +37,11 @@ img: to-web3/1,to-web3/2,to-web3/3
 
 这就需要运营时要找对需求而并不是广撒网，需要的流量群体质量越高，那么也就需要付出其对应的时间来弥补。
 
-::img-tips
-<img src="/images/info/4/1.png" >
-图源 1 | 利用 Stable Diffusion 生成的虚拟动漫人物(稍加少量修改和装饰) https://github.com/AUTOMATIC1111/stable-diffusion-webui
+::text-space
+---
+img: 4/1
+info: 图源 1 | 利用 Stable Diffusion 生成的虚拟动漫人物(稍加少量修改和装饰) https://github.com/AUTOMATIC1111/stable-diffusion-webui
+---
 ::
 
 说到这个设计的出发点其实挺有趣的，因为 TA 是米哈游出来的，所以当时想的是："干翻米哈游！" 的目的去着手弄的。
@@ -48,9 +50,10 @@ img: to-web3/1,to-web3/2,to-web3/3
 
 生成出来的角色手部、裙子和脸有了很多问题所以当时我用数位板进行了稍微地结构性的调整了一下。
 
-::img-tips
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/910286322?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="現実世界の歌手の声抽出による AI 二次最適化とシミュレーション"></iframe></div>
-视频 1 | 通过对现实世界歌手声音的提取 AI 二次优化和模拟@江雪銮音实验室 https://music.163.com/song?id=2075128378&userid=1548171212
+::text-space
+---
+info: <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/910286322?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="現実世界の歌手の声抽出による AI 二次最適化とシミュレーション"></iframe></div>视频 1 | 通过对现实世界歌手声音的提取 AI 二次优化和模拟@江雪銮音实验室 https://music.163.com/song?id=2075128378&userid=1548171212
+---
 ::
 
 现在 AICG 已经发展成图片、视频甚至声音、音乐等方面的应用。当然，在设计、艺术领域以及一些小圈子里，有一些对AI创作的抵制声音。
