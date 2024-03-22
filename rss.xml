@@ -4,13 +4,8 @@
         <description><![CDATA[RHYME.Q 韵清]]></description>
         <link>https://otvto.work</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 18 Mar 2024 03:18:51 GMT</lastBuildDate>
+        <lastBuildDate>Fri, 22 Mar 2024 23:42:22 GMT</lastBuildDate>
         <atom:link href="https://otvto.work/rss.xml" rel="self" type="application/rss+xml"/>
-        <item>
-            <title><![CDATA[Credit]]></title>
-            <link>otvto.work/credit</link>
-            <guid isPermaLink="true">otvto.work/credit</guid>
-        </item>
         <item>
             <title><![CDATA[广东电信 IPTV 支付系统存在逻辑缺陷漏洞]]></title>
             <link>otvto.work/credit/china-telecom</link>
