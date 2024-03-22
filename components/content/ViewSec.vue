@@ -10,34 +10,19 @@ const selectTab = (tab: string) => {
 const currentPage = ref<number>(1);
 const itemsPerPage = 5;
 
-/**
- * !: Generate output Error
- * TODO: Change Split vue file
- */
-// const { data: equalQuery } = await useAsyncData("equal", () => {
-//   if (props.pages === 'security') {
-//     return queryContent("work/").where({ types: 'SECURITY' }).find();
-//   } else if (props.pages === 'credit') {
-//     return queryContent("credit/").where({ types: 'CREDIT' }).find();
-//   } else {
-//     return queryContent("work/").find();
-//   }
-// });
-
-const { data: equalQuery } = await useAsyncData("equal", () => {
-  // 返回 /more 目录下的数据，也可以（.where({ director: 'Hayao Miyazaki' }) 来进行过滤）
+const { data: equalQuerySec } = await useAsyncData("equal_sec", () => {
   return queryContent("work/").where({ types: "SECURITY" }).find();
 });
 
 // 排序
-equalQuery.value?.sort((a, b) => {
+equalQuerySec.value?.sort((a, b) => {
   const dateA = new Date(a.release_date).getTime();
   const dateB = new Date(b.release_date).getTime();
   return dateB - dateA;
 });
 
 // 计算总页数
-const totalPages = Math.ceil(equalQuery.value?.length / itemsPerPage);
+const totalPages = Math.ceil(equalQuerySec.value?.length / itemsPerPage);
 
 // 分页逻辑
 const paginate = (page: number) => {
@@ -48,12 +33,12 @@ const paginate = (page: number) => {
 const getCurrentPageData = computed(() => {
   const startIndex = (currentPage.value - 1) * itemsPerPage;
   const endIndex = currentPage.value * itemsPerPage;
-  return equalQuery.value?.slice(startIndex, endIndex) || [];
+  return equalQuerySec.value?.slice(startIndex, endIndex) || [];
 });
 
 // fix generate page show error
 const getAllData = computed(() => {
-  return equalQuery.value || [];
+  return equalQuerySec.value || [];
 });
 
 const currentUrl = ref<string>("");
@@ -72,48 +57,35 @@ const isCurrentPage = (path: string) => {
       <div>
         <page-img title="Security"/>
       </div>
-      <div class="view-sec_button">
-        <NuxtLink
-          to="/security"
-          :class="{ 'active-link': isCurrentPage('/security') }"
-          external
-          ><p>article</p></NuxtLink
-        >
-        <NuxtLink
-          to="/credit"
-          :class="{ 'active-link': isCurrentPage('/credit') }"
-          external
-          ><p>Credit</p></NuxtLink
-        >
-      </div>
     </div>
     <div :key="selectedTab" v-show="true" :id="selectedTab">
       <div class="column body-content-layout">
         <div
           class="body-con-main"
-          v-if="equalQuery"
-          v-for="all in getCurrentPageData"
-          :key="all.id"
+          v-if="equalQuerySec"
+          v-for="alls in getCurrentPageData"
+          :key="alls.id"
         >
           <ul class="body-con-main_title">
             <li class="body-con-main_title__top"></li>
-            <li style="color: #000000; font-weight: bold">{{ all.title }}</li>
-            <li>{{ all.types }}</li>
-            <li>{{ all.release_date }}</li>
+            <li style="color: #000000; font-weight: bold">{{ alls.title }}</li>
+            <li>{{ alls.types }}</li>
+            <li>{{ alls.release_date }}</li>
           </ul>
-          <p>{{ all._PATH }}</p>
-          <NuxtLink :to="all._path"
+          <p>{{ alls._PATH }}</p>
+          <NuxtLink :to="alls._path"
             ><div
               class="body-con-main__img"
-              :style="{ background: 'left no-repeat url(' + all.images + ')' }"
+              :style="{ background: 'left no-repeat url(' + alls.images + ')' }"
             ></div
           ></NuxtLink>
           <div id="auther">
-            <a :href="all.demo" target="_blank">{{ all.demo }}</a>
-            <p>BY: {{ all.director }}</p>
+            <a :href="alls.demo" target="_blank">{{ alls.demo }}</a>
+            <p>BY: {{ alls.director }}</p>
           </div>
         </div>
-        <div class="pagination-layout">
+        <view-credit />
+        <div class="pagination-layout" :style="{ display: currentPage === 1 ? 'none' : 'inline-block' }">
           <div id="pageto">
             <p
               @click="paginate(currentPage - 1)"
@@ -196,7 +168,8 @@ const isCurrentPage = (path: string) => {
   cursor: pointer;
   display: block;
   line-height: 3px;
-  margin-top: 50px;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
 }
 #auther {
   line-height: 12px;

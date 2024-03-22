@@ -1,123 +1,53 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { computed } from "vue";
 
-const selectedTab = ref("security");
+const currentPage_credit = ref<number>(1);
+const itemsPerPage_credit = 5;
 
-const selectTab = (tab: string) => {
-  selectedTab.value = tab;
-};
-
-import { ref, computed } from "vue";
-
-const currentPage = ref<number>(1);
-const itemsPerPage = 5;
-
-/**
- * !: Generate output Error
- * TODO: Change Split vue file
- */
-// const { data: equalQuery } = await useAsyncData("equal", () => {
-//   if (props.pages === 'security') {
-//     return queryContent("work/").where({ types: 'SECURITY' }).find();
-//   } else if (props.pages === 'credit') {
-//     return queryContent("credit/").where({ types: 'CREDIT' }).find();
-//   } else {
-//     return queryContent("work/").find();
-//   }
-// });
-
-const { data: equalQuery } = await useAsyncData("equal", () => {
-  // 返回 /more 目录下的数据，也可以（.where({ director: 'Hayao Miyazaki' }) 来进行过滤）
+const { data: equalQuery_credit } = await useAsyncData("equal_credit", () => {
   return queryContent("credit/").where({ types: "CREDIT" }).find();
 });
 
-// 排序
-equalQuery.value?.sort((a, b) => {
+equalQuery_credit.value?.sort((a, b) => {
   const dateA = new Date(a.release_date).getTime();
   const dateB = new Date(b.release_date).getTime();
   return dateB - dateA;
 });
 
-// 计算总页数
-const totalPages = Math.ceil(equalQuery.value?.length / itemsPerPage);
-
-// 分页逻辑
-const paginate = (page: number) => {
-  currentPage.value = page;
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
-
-const getCurrentPageData = computed(() => {
-  const startIndex = (currentPage.value - 1) * itemsPerPage;
-  const endIndex = currentPage.value * itemsPerPage;
-  return equalQuery.value?.slice(startIndex, endIndex) || [];
+const getCurrentPageData_credit = computed(() => {
+  const startIndex = (currentPage_credit.value - 1) * itemsPerPage_credit;
+  const endIndex = currentPage_credit.value * itemsPerPage_credit;
+  return equalQuery_credit.value?.slice(startIndex, endIndex) || [];
 });
-
-// fix generate page show error
-const getAllData = computed(() => {
-  return equalQuery.value || [];
-});
-
-const currentUrl = ref<string>("");
-
-onMounted(() => {
-  currentUrl.value = window.location.href;
-});
-
-const isCurrentPage = (path: string) => {
-  return currentUrl.value.includes(path);
-};
 </script>
 
 <template>
   <main>
-    <div class="view-sec_layout">
-      <div>
-        <PageImg title="Security" />
-      </div>
-      <div class="view-sec_button">
-        <NuxtLink
-          to="/security"
-          :class="{ 'active-link': isCurrentPage('/security') }"
-          external
-          ><p>article</p></NuxtLink
-        >
-        <NuxtLink
-          to="/credit"
-          :class="{ 'active-link': isCurrentPage('/credit') }"
-          external
-          ><p>Credit</p></NuxtLink
-        >
-      </div>
-    </div>
-    <div :key="selectedTab" v-show="true" :id="selectedTab">
-      <!-- security credit -->
-      <div class="credit-layout">
-        <div
-          class="body-con-credit-main"
-          v-if="equalQuery"
-          v-for="all in getCurrentPageData"
-          :key="all.id"
-        >
-          <NuxtLink :to="all._path">
-            <div class="credit-con_title">
-              <img :src="all.platform" />
-              <p>
-                {{ all.title }}<br /><span style="font-weight: 300"
-                  >{{ all.vulnerability }} -
-                  <span style="font-size: small; font-weight: 300">{{
-                    all.release_date
-                  }}</span></span
-                >
-              </p>
-              <a :href="all.demo">SOURCE: {{ all.demo }}</a>
-            </div>
-            <div
-              class="body-con-credit__img"
-              :style="{ background: 'left no-repeat url(' + all.images + ')' }"
-            ></div>
-          </NuxtLink>
-        </div>
+    <!-- security credit -->
+    <div class="credit-layout">
+      <div
+        class="body-con-credit-main"
+        v-for="all in getCurrentPageData_credit"
+        :key="all.id"
+      >
+        <NuxtLink :to="all._path">
+          <div class="credit-con_title">
+            <img :src="all.platform" />
+            <p>
+              {{ all.title }}<br /><span style="font-weight: 300"
+                >{{ all.vulnerability }} -
+                <span style="font-size: small; font-weight: 300">{{
+                  all.release_date
+                }}</span></span
+              >
+            </p>
+            <a :href="all.demo">SOURCE: {{ all.demo }}</a>
+          </div>
+          <div
+            class="body-con-credit__img"
+            :style="{ background: 'left no-repeat url(' + all.images + ')' }"
+          ></div>
+        </NuxtLink>
       </div>
     </div>
   </main>
@@ -154,7 +84,7 @@ const isCurrentPage = (path: string) => {
   mix-blend-mode: exclusion;
 }
 .credit-layout {
-  margin-top: -10px;
+  margin-top: 3vh;
 }
 .body-con-credit__img {
   width: 100%;
@@ -190,20 +120,7 @@ const isCurrentPage = (path: string) => {
 .pagination-layout p.active {
   font-weight: bold;
 }
-#pageto {
-  display: flex;
-  font-weight: bold;
-}
-#pageto p {
-  margin-right: 20px;
-  color: #cfcfcf;
-}
-#pagenum {
-  display: flex;
-}
-#pagenum div {
-  margin-right: 10px;
-}
+
 /* 添加 firstPage 类的样式，以设置第一页的特殊样式 */
 .pagination-layout p.firstPage {
   color: #213ed4 !important;
@@ -214,18 +131,10 @@ const isCurrentPage = (path: string) => {
   line-height: 3px;
   margin-top: 50px;
 }
-#auther {
-  line-height: 12px;
-  text-transform: uppercase;
-}
+
 .body-con-support svg {
   margin-top: 20px;
   height: 30px;
-}
-#auther a {
-  color: #9c9c9c;
-  word-break: break-all;
-  line-height: initial;
 }
 
 .body-con-main {
